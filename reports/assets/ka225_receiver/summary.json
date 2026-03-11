@@ -1,0 +1,99 @@
+{
+  "title": "Ka 22.5 GHz 接收机调试与架构演进汇报",
+  "generation": {
+    "seed": 2026,
+    "script": "notebooks/nb_ka225_rx_from_real_wkb_debug.py",
+    "asset_dir": "reports/assets/ka225_receiver"
+  },
+  "baseline": {
+    "tau_rmse_ns": 8366.573,
+    "fd_rmse_hz": 2488.483,
+    "final_fd_est_khz": 16.299,
+    "final_fd_true_khz": 8.567,
+    "final_tau_est_us": 452.805,
+    "final_tau_true_us": 433.63
+  },
+  "current": {
+    "tau_rmse_ns": 612.8004734873059,
+    "fd_rmse_hz": 106.30755888566098,
+    "final_fd_est_khz": 8.542891542658735,
+    "final_fd_true_khz": 8.566594518620326,
+    "final_tau_est_us": 433.041417249309,
+    "final_tau_true_us": 433.63046735365793,
+    "peak_to_second_ratio": 1.0135548725597694,
+    "peak_to_second_db": 0.05847265811285334,
+    "coarse_code_error_ns": 179.52779059323896,
+    "coarse_freq_error_hz": 7.957100823688961,
+    "loss_found": false,
+    "loss_start_time_s": null
+  },
+  "tracking_diagnostics": {
+    "predicted_cn0_dbhz_min": 8.032158417246492,
+    "predicted_cn0_dbhz_max": 44.803821273861885,
+    "post_corr_snr_db_min": -22.85559857971456,
+    "post_corr_snr_db_max": 20.154542371114722,
+    "pll_out_of_linear_frac": 0.347635566916195,
+    "dll_out_of_linear_frac": 0.07248493700931166,
+    "weak_prompt_frac": 0.019536242468504657,
+    "carrier_lock_weak_frac": 0.22494066094577322,
+    "fll_active_frac": 0.22868358590469234,
+    "dll_frozen_frac": 0.23562169070659122,
+    "pll_frozen_frac": 0.010133284644878615,
+    "pll_integrator_clamped_count": 0,
+    "pll_freq_clamped_count": 0,
+    "segment_names": [
+      "前段",
+      "中段",
+      "后段"
+    ],
+    "segment_tau_rmse_ns": [
+      476.55457484497634,
+      556.6078844502065,
+      767.8778144370066
+    ],
+    "segment_fd_rmse_hz": [
+      150.41999832659639,
+      66.25431264348668,
+      83.00380776948258
+    ],
+    "segment_prompt_snr_db": [
+      17.18684930124394,
+      16.5680347263323,
+      15.925084038068837
+    ],
+    "segment_pll_rms": [
+      0.5305321237951726,
+      0.30467290222065385,
+      0.38606443840171195
+    ],
+    "segment_dll_rms": [
+      0.09770485267652884,
+      0.09975842388848874,
+      0.14060247515455476
+    ],
+    "segment_loss_frac": [
+      0.017940290331416052,
+      0.005340271121456935,
+      0.08558126797206628
+    ]
+  },
+  "architecture": {
+    "receiver_context": "ReceiverRuntimeContext 汇聚配置、码、信道重采样结果和时间轴。",
+    "acquisition_engine": "AcquisitionEngine 负责粗捕获、细捕获与捕获物理诊断。",
+    "tracking_engine": "TrackingEngine 负责 DLL + FLL-assisted PLL 跟踪和环路物理诊断。",
+    "receiver": "KaBpskReceiver 编排 acquisition -> tracking -> diagnostics 的完整链路。"
+  },
+  "fixes": [
+    "引入粗捕获后的局部细化搜索，显著减小初始码相位误差。",
+    "在码 NCO 与载波 NCO 中加入线性预测器，匹配脚本中显式给定的动态模型。",
+    "加入 FLL 辅助 PLL，改善载波动态收敛与早期稳定性。",
+    "为 DLL/PLL 更新增加基于后相关 SNR 与锁定指标的门控。",
+    "补充了可选的内部可视化，覆盖捕获块、相关器、环路、快照与频谱。"
+  ],
+  "figures": [
+    "receiver_overview.png",
+    "receiver_acquisition_internal.png",
+    "receiver_tracking_internal.png",
+    "receiver_tracking_snapshots.png"
+  ]
+}
