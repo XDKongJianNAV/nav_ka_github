@@ -1,0 +1,139 @@
+{
+  "receiver_truth_reference": {
+    "latitude_deg": 34.0,
+    "longitude_deg": 108.0,
+    "height_m": 500.0,
+    "initial_clock_bias_m": 120.0,
+    "initial_clock_drift_mps": 0.38,
+    "receiver_velocity_ecef_mps": [
+      -85.0,
+      120.0,
+      35.0
+    ]
+  },
+  "legacy_reused_components": [
+    "build_fields_from_csv",
+    "compute_real_wkb_series",
+    "build_signal_config_from_wkb_time",
+    "resample_wkb_to_receiver_time",
+    "KaBpskReceiver.run",
+    "solve_pvt_iterative",
+    "compute_tropo_delay_m",
+    "lla_to_ecef",
+    "ecef_delta_to_enu"
+  ],
+  "dynamic_state_definition": "[rx, ry, rz, vx, vy, vz, cb, cd] in [m, m/s, m, m/s]",
+  "state_equations": {
+    "position": "r(k+1) = r(k) + v(k) * dt",
+    "velocity": "v(k+1) = v(k) + w_v",
+    "clock_bias": "cb(k+1) = cb(k) + cd(k) * dt",
+    "clock_drift": "cd(k+1) = cd(k) + w_c"
+  },
+  "measurement_equations": {
+    "pseudorange": "rho = ||rs-r|| + cb - c*dts + tropo + dispersive + hardware + noise",
+    "range_rate": "rhodot = u_LOS^T (vs-vr) + cd - c*ddts + noise",
+    "doppler_conversion": "range_rate_mps = -(c / fc) * doppler_hz"
+  },
+  "time_axes": {
+    "receiver_sample_rate_hz": 500000.0,
+    "tracking_output_rate_hz": 1000.0000000001102,
+    "navigation_rate_hz": 10.0,
+    "num_navigation_epochs": 219
+  },
+  "legacy_channel_metrics": {
+    "effective_pseudorange_sigma_100ms_m": 2460.8371329435217,
+    "effective_pseudorange_sigma_1s_m": 2158.542777195892,
+    "effective_pseudorange_rmse_m": 2304.3443302367887,
+    "effective_pseudorange_bias_m": -1199.0463920437646,
+    "tau_g_median_m": 0.14488263248466357,
+    "tau_g_span_m": 0.03591633012081161,
+    "dynamic_range_rate_sigma_100ms_mps": 38.67661608915098
+  },
+  "comparison_runs": {
+    "epoch_wls": {
+      "valid_epochs": 167,
+      "mean_position_error_3d_m": 9281.839263835609,
+      "mean_clock_bias_abs_error_m": 6152.629827160045,
+      "mean_residual_rms_m": 6326.586892617887
+    },
+    "ekf_pr_only": {
+      "mode": "ekf_pr_only",
+      "mean_position_error_3d_m": 105900.20570258608,
+      "mean_velocity_error_3d_mps": 11288.792893037682,
+      "mean_clock_bias_abs_error_m": 60168.59461301376,
+      "mean_clock_drift_abs_error_mps": 5798.288712504841,
+      "mean_innovation_pr_m": 19522.295197477815,
+      "mean_innovation_rr_mps": null,
+      "prediction_only_epochs": 52,
+      "diverged_epochs": 0
+    },
+    "ekf_pr_doppler": {
+      "mode": "ekf_pr_doppler",
+      "mean_position_error_3d_m": 54952.9646045092,
+      "mean_velocity_error_3d_mps": 6547.8021724039145,
+      "mean_clock_bias_abs_error_m": 39136.26250347666,
+      "mean_clock_drift_abs_error_mps": 4288.38025118547,
+      "mean_innovation_pr_m": 14077.550925502575,
+      "mean_innovation_rr_mps": 1283.552952553013,
+      "prediction_only_epochs": 52,
+      "diverged_epochs": 0
+    }
+  },
+  "degradation_window_s": {
+    "start_s": 10.077999000000002,
+    "end_s": 12.693999000000002,
+    "degraded_satellites": [
+      "G06",
+      "G07",
+      "G08"
+    ]
+  },
+  "simplifications": [
+    "Satellite geometry is synthesized in receiver-local az/el/range coordinates, mapped to ECEF at each epoch, and differentiated to obtain velocity; no broadcast ephemeris is used.",
+    "Receiver truth is a self-consistent constant-velocity ECEF trajectory, not a RAM-C 6DoF truth.",
+    "All satellites share one reused real single-channel Ka/WKB background, then receive per-satellite geometry and weighting maps.",
+    "Carrier phase is not used in the main EKF because ambiguity states are not part of the 8-state baseline filter.",
+    "Troposphere, satellite clocks, and hardware terms are parameterized navigation-layer terms."
+  ],
+  "claim_boundary": "This is a hybrid dynamic multisatellite Ka navigation experiment coupled to a reused real single-channel WKB/receiver background, not a fully end-to-end real multisatellite Ka navigation performance result.",
+  "outputs": {
+    "results_dir": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz",
+    "legacy_channel_overview_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/legacy_channel_overview.png",
+    "sky_geometry_dynamic_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/sky_geometry_dynamic.png",
+    "geometry_3d_timeslices_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/geometry_3d_timeslices.png",
+    "geometry_timeseries_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/geometry_timeseries.png",
+    "observation_formation_overview_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/observation_formation_overview.png",
+    "trajectory_error_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/trajectory_error.png",
+    "velocity_error_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/velocity_error.png",
+    "clock_bias_drift_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/clock_bias_drift.png",
+    "innovation_timeseries_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/innovation_timeseries.png",
+    "visible_satellites_and_weights_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/visible_satellites_and_weights.png",
+    "filter_vs_epoch_wls_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/filter_vs_epoch_wls.png",
+    "summary_json": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/summary.json",
+    "dynamic_observations_csv": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/dynamic_observations.csv",
+    "dynamic_state_history_csv": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/dynamic_state_history.csv",
+    "report_summary_md": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/report_summary.md",
+    "report_full_md": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/report_full.md"
+  },
+  "figure_groups": {
+    "input_background_figures": [
+      "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/legacy_channel_overview.png"
+    ],
+    "geometry_figures": [
+      "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/sky_geometry_dynamic.png",
+      "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/geometry_3d_timeslices.png",
+      "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/geometry_timeseries.png"
+    ],
+    "observation_intermediate_figures": [
+      "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/observation_formation_overview.png",
+      "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/visible_satellites_and_weights.png"
+    ],
+    "estimation_result_figures": [
+      "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/trajectory_error.png",
+      "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/velocity_error.png",
+      "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/clock_bias_drift.png",
+      "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/innovation_timeseries.png",
+      "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/ekf/22p0GHz/filter_vs_epoch_wls.png"
+    ]
+  }
+}

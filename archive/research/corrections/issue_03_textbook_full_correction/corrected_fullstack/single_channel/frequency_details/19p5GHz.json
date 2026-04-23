@@ -1,0 +1,41 @@
+{
+  "label": "19p5GHz",
+  "frequency_hz": 19500000000.0,
+  "metrics": {
+    "tau_rmse_ns": 9478.360403025852,
+    "fd_rmse_hz": 3662.7234984244087,
+    "range_rate_rmse_mps": 56.3106092598468,
+    "peak_to_second_ratio": 1.0203190612135329,
+    "peak_to_second_db": 0.08736000052884738,
+    "loss_found": false,
+    "loss_fraction": 0.1821252510498448,
+    "pll_integrator_clamped": 0,
+    "pll_freq_clamped": 0,
+    "tau_g_median_m": 0.1464031434665242,
+    "tau_g_span_m": 0.044880527634579157,
+    "pseudorange_mean_m": 115466.40596803487,
+    "range_rate_mean_mps": -462.1952145892644,
+    "carrier_phase_mean_cycles": 385932.1315766429,
+    "post_corr_snr_median_db": 15.385939973134487,
+    "carrier_lock_metric_median": 0.09746659078385204,
+    "nav_bit_rate_bps": 50.0,
+    "nav_data_enabled": true,
+    "effective_pseudorange_sigma_100ms_m": 2475.54041584435,
+    "effective_pseudorange_sigma_1s_m": 2316.266186237503
+  },
+  "wkb": {
+    "amplitude_median": 0.8783985095803515,
+    "attenuation_db_median": -1.1261683346903792,
+    "phase_rad_median": -54.900593691093135,
+    "group_delay_ns_median": 0.4883483208457639
+  },
+  "signal_model": {
+    "nav_data_enabled": true,
+    "nav_bit_rate_bps": 50.0
+  },
+  "outputs": {
+    "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/19p5GHz_receiver_spectrum.png",
+    "natural_measurements_csv": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/observables/19p5GHz/natural_measurements.csv",
+    "standard_observables_csv": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/observables/19p5GHz/standard_observables.csv"
+  }
+}

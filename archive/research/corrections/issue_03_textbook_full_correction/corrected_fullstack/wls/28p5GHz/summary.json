@@ -1,0 +1,161 @@
+{
+  "receiver_truth": {
+    "latitude_deg": 34.0,
+    "longitude_deg": 108.0,
+    "height_m": 500.0,
+    "receiver_clock_bias_m": 120.0,
+    "carrier_frequency_hz": 28500000000.0
+  },
+  "legacy_coupling_level": "real WKB and single-channel receiver reused; multisat geometry and navigation solution added here",
+  "real_reused_components": [
+    "build_fields_from_csv",
+    "compute_real_wkb_series",
+    "build_textbook_signal_config",
+    "build_navigation_data_model",
+    "run_textbook_acquisition",
+    "run_textbook_tracking",
+    "form_standard_observables"
+  ],
+  "simplified_components": [
+    "多星几何使用静态自洽 az/el 场景，不是真实星历。",
+    "所有卫星共享同一真实单通道 WKB/接收机背景，再按仰角映射到多星伪距形成。",
+    "对流层、卫星钟差、硬件偏差使用参数化项。",
+    "多星伪距方差由旧脚本单通道伪距误差统计映射得到，不是真实多星同步跟踪输出。"
+  ],
+  "claim_boundary": "本结果代表真实单通道 Ka/WKB 背景耦合下的 hybrid 多星标准伪距/WLS 实验，不代表真实多星端到端 Ka 导航系统。",
+  "legacy_channel_metrics": {
+    "effective_pseudorange_sigma_100ms_m": 10528.60342460138,
+    "effective_pseudorange_sigma_1s_m": 10263.988788009136,
+    "effective_pseudorange_rmse_m": 16763.926714727157,
+    "effective_pseudorange_bias_m": -14212.237594459011,
+    "tau_g_median_m": 0.1426984032177503,
+    "tau_g_span_m": 0.03256372609720781
+  },
+  "experiments": {
+    "A": {
+      "case_name": "A",
+      "description": "几何较好、噪声中等；验证在真实单通道背景映射下 LS/WLS 都能工作。",
+      "num_satellites": 8,
+      "dops": {
+        "GDOP": 4.32480148903137,
+        "PDOP": 3.555851564906343,
+        "HDOP": 1.4279257363997195,
+        "VDOP": 3.2565485476151297,
+        "TDOP": 2.461671701888996
+      },
+      "ls": {
+        "converged": true,
+        "iterations": 4,
+        "position_ecef_m": [
+          -1636007.2224783034,
+          5031888.159726118,
+          3545157.6189441835
+        ],
+        "clock_bias_m": -1980.5091076551616,
+        "clock_bias_s": -6.606267285266935e-06,
+        "enu_error_m": {
+          "east": 996.374494475878,
+          "north": 102.52103518476406,
+          "up": -2957.002973614547
+        },
+        "position_error_3d_m": 3122.040884079305,
+        "residual_rms_m": 1064.4573188930303
+      },
+      "wls": {
+        "converged": true,
+        "iterations": 4,
+        "position_ecef_m": [
+          -1635957.5848255625,
+          5032198.097171245,
+          3545424.3258944293
+        ],
+        "clock_bias_m": -1689.448813072844,
+        "clock_bias_s": -5.635394647162351e-06,
+        "enu_error_m": {
+          "east": 853.3903436456101,
+          "north": 167.37632089444423,
+          "up": -2576.205076695397
+        },
+        "position_error_3d_m": 2719.029699840527,
+        "weighted_residual_rms_m": 0.17700252534105176
+      }
+    },
+    "B": {
+      "case_name": "B",
+      "description": "引入低仰角大误差；低仰角星更容易放大真实单通道背景映射出的测量不确定性。",
+      "num_satellites": 8,
+      "dops": {
+        "GDOP": 2.3345717240459307,
+        "PDOP": 2.1040175018509686,
+        "HDOP": 1.1512697647243384,
+        "VDOP": 1.7610984006939414,
+        "TDOP": 1.0116004579969304
+      },
+      "ls": {
+        "converged": true,
+        "iterations": 5,
+        "position_ecef_m": [
+          -1629518.7023200314,
+          5089352.294915345,
+          3566846.418646278
+        ],
+        "clock_bias_m": 35732.44300268294,
+        "clock_bias_s": 0.00011919060019409476,
+        "enu_error_m": {
+          "east": -22931.969223691693,
+          "north": -11356.241485929258,
+          "up": 52817.210492803366
+        },
+        "position_error_3d_m": 58689.83862138472,
+        "residual_rms_m": 26693.55980495483
+      },
+      "wls": {
+        "converged": true,
+        "iterations": 5,
+        "position_ecef_m": [
+          -1643104.7292286202,
+          5048733.936870084,
+          3550673.172878326
+        ],
+        "clock_bias_m": 13638.30625258102,
+        "clock_bias_s": 4.549249285177488e-05,
+        "enu_error_m": {
+          "east": 2540.8731178748512,
+          "north": -5510.316974788633,
+          "up": 15227.790627950604
+        },
+        "position_error_3d_m": 16392.23098826035,
+        "weighted_residual_rms_m": 1.0533184656189905
+      }
+    }
+  },
+  "monte_carlo": {
+    "based_on_case": "B",
+    "num_runs": 120,
+    "stats": {
+      "LS": {
+        "mean_m": 33695.1706644593,
+        "std_m": 22278.397839481237,
+        "p90_m": 63381.79081383953
+      },
+      "WLS": {
+        "mean_m": 21668.586377484437,
+        "std_m": 13613.540247364474,
+        "p90_m": 41417.06612234569
+      }
+    }
+  },
+  "output_files": {
+    "results_dir": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls/28p5GHz",
+    "sky_geometry_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls/28p5GHz/sky_geometry.png",
+    "geometry_3d_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls/28p5GHz/geometry_3d.png",
+    "legacy_channel_overview_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls/28p5GHz/legacy_channel_overview.png",
+    "pseudorange_formation_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls/28p5GHz/pseudorange_formation.png",
+    "ls_vs_wls_residuals_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls/28p5GHz/ls_vs_wls_residuals.png",
+    "monte_carlo_position_error_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls/28p5GHz/monte_carlo_position_error.png",
+    "dop_summary_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls/28p5GHz/dop_summary.png",
+    "satellite_observations_csv": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls/28p5GHz/satellite_observations.csv",
+    "summary_json": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls/28p5GHz/summary.json",
+    "report_summary_md": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls/28p5GHz/report_summary.md"
+  }
+}

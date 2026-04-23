@@ -1,0 +1,19 @@
+digraph legacy_receiver_chain {
+  graph [rankdir=LR, splines=polyline, nodesep=0.5, ranksep=0.7, bgcolor="white", margin=0.2];
+  node [shape=box, style="rounded", fontname="PingFang SC", fontsize=14, color="#333333", penwidth=1.2, margin="0.18,0.10"];
+  edge [fontname="PingFang SC", fontsize=12, color="#444444", penwidth=1.1, arrowsize=0.8];
+
+  rx [label="接收复信号\n近似无数据"];
+  acq [label="捕获\n粗码时延 / 粗频偏"];
+  corr [label="相关器\n早 / 准 / 晚"];
+  ctl [label="整体更新律\n码环 + 载波环 + 辅助项"];
+  state [label="内部状态\n码时延估计\n载波相位累计量\n载波频率估计"];
+  jump [label="直接改名输出\n伪距 / 载波相位 / 多普勒", color="#a13a2f", fontcolor="#a13a2f"];
+  nav [label="WLS / EKF"];
+  truth_code [label="真值码率辅助", shape=box, style="rounded,dashed", color="#c86f16", fontcolor="#c86f16"];
+  truth_car [label="真值频率辅助", shape=box, style="rounded,dashed", color="#c86f16", fontcolor="#c86f16"];
+
+  rx -> acq -> corr -> ctl -> state -> jump -> nav;
+  truth_code -> ctl [style=dashed, color="#c86f16", label="运行时注入"];
+  truth_car -> ctl [style=dashed, color="#c86f16", label="运行时注入"];
+}

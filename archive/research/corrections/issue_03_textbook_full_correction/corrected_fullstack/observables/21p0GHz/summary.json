@@ -1,0 +1,18 @@
+{
+  "frequency_hz": 21000000000.0,
+  "signal_model": {
+    "nav_data_enabled": true,
+    "nav_bit_rate_bps": 50.0,
+    "sign_convention": "positive range_rate means increasing geometric range; doppler_hz_compat = -range_rate / wavelength"
+  },
+  "natural_measurements": {
+    "count": 21908,
+    "tau_rmse_ns": 8644.393802366149,
+    "fd_rmse_hz": 3614.5564191856697
+  },
+  "standard_observables": {
+    "pseudorange_sigma_100ms_m": 2287.9900251012778,
+    "pseudorange_sigma_1s_m": 2068.8400661519186,
+    "range_rate_rmse_mps": 51.60079778511192
+  }
+}

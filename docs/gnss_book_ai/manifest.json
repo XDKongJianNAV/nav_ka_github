@@ -1,0 +1,17 @@
+{
+  "source_pdf": "Understanding GPSGNSS Principles and Applications, Third Edition (Gnss Technology and Applications Series) (Elliott Kaplan, Christopher J. Hegarty) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+  "source_pdf_path": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/Understanding GPSGNSS Principles and Applications, Third Edition (Gnss Technology and Applications Series) (Elliott Kaplan, Christopher J. Hegarty) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+  "num_pages": 993,
+  "num_outline_entries": 118,
+  "pages_with_text": 993,
+  "pages_with_images": 243,
+  "total_extracted_images": 404,
+  "page_renders_generated": 993,
+  "artifacts": {
+    "markdown": "book.md",
+    "pages_jsonl": "pages.jsonl",
+    "outline_json": "outline.json",
+    "images_dir": "assets/images",
+    "page_renders_dir": "assets/page_renders"
+  }
+}

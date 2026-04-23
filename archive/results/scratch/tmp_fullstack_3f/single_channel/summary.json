@@ -1,0 +1,177 @@
+{
+  "title": "泛 Ka 多频 WKB 与接收机频谱分析",
+  "frequencies_hz": [
+    19000000000.0,
+    22500000000.0,
+    31000000000.0
+  ],
+  "frequency_labels": [
+    "19p0GHz",
+    "22p5GHz",
+    "31p0GHz"
+  ],
+  "wkb_time_range_s": [
+    0.0,
+    21.908327999999983
+  ],
+  "collision_frequency_hz": 1000000000.0,
+  "receiver_config": {
+    "fs_hz": 500000.0,
+    "chip_rate_hz": 50000.0,
+    "coherent_integration_s": 0.001,
+    "code_length": 127,
+    "cn0_dbhz": 45.0
+  },
+  "wkb_summary": {
+    "frequencies_hz": [
+      19000000000.0,
+      22500000000.0,
+      31000000000.0
+    ],
+    "amplitude": {
+      "min": [
+        0.0004942560021941739,
+        0.01409747531016886,
+        0.705223192522726
+      ],
+      "max": [
+        0.968556040075224,
+        0.9776713586437967,
+        0.988293115094812
+      ],
+      "median": [
+        0.8715066214703807,
+        0.912109178984261,
+        0.9545941456492688
+      ],
+      "p05": [
+        0.027608547097904498,
+        0.2337398631971977,
+        0.8160823297070824
+      ],
+      "p95": [
+        0.9587198827361528,
+        0.9715179509334658,
+        0.985496089988723
+      ]
+    },
+    "attenuation_dB": {
+      "min": [
+        -66.12096095909283,
+        -37.017173146945844,
+        -3.033468271781726
+      ],
+      "max": [
+        -0.2775049239602145,
+        -0.1961421499225974,
+        -0.10228460240019224
+      ],
+      "median": [
+        -1.1945861778718492,
+        -0.7990636830407809,
+        -0.4036247070085944
+      ],
+      "p05": [
+        -31.179154658244347,
+        -12.62574684828465,
+        -1.7653205610550131
+      ],
+      "p95": [
+        -0.36616537435533303,
+        -0.250983410433293,
+        -0.12690188945251418
+      ]
+    },
+    "phase_shift_rad": {
+      "min": [
+        -55.152428406399814,
+        -65.51691321599587,
+        -90.59681456589195
+      ],
+      "max": [
+        -42.10442120760247,
+        -52.99243770963312,
+        -82.65561818667092
+      ],
+      "median": [
+        -53.3582576571016,
+        -64.03847006970109,
+        -89.54047947602507
+      ],
+      "p05": [
+        -54.9929098072858,
+        -65.39606784207373,
+        -90.51392247345576
+      ],
+      "p95": [
+        -45.1191273504495,
+        -56.94473298310964,
+        -85.45937585498756
+      ]
+    },
+    "group_delay_s": {
+      "min": [
+        4.717994848898981e-10,
+        4.708056522804297e-10,
+        4.6042538671637645e-10
+      ],
+      "max": [
+        6.082476313126995e-10,
+        5.651328099721052e-10,
+        6.006371332572722e-10
+      ],
+      "median": [
+        4.880099905685791e-10,
+        4.835283868889753e-10,
+        4.713933130188769e-10
+      ],
+      "p05": [
+        4.73431520664239e-10,
+        4.720316756796742e-10,
+        4.684456576676157e-10
+      ],
+      "p95": [
+        5.618224210259338e-10,
+        5.402244367747832e-10,
+        5.28163029039934e-10
+      ]
+    }
+  },
+  "receiver_runs": [
+    {
+      "label": "19p0GHz",
+      "frequency_hz": 19000000000.0,
+      "tau_rmse_ns": 1141.4146034529545,
+      "fd_rmse_hz": 111.94739165037308,
+      "peak_to_second_db": 0.18762251224052628,
+      "loss_fraction": 0.08115756801168524,
+      "spectrum_png": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/single_channel/receiver_spectra/19p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "22p5GHz",
+      "frequency_hz": 22500000000.0,
+      "tau_rmse_ns": 570.7377705234369,
+      "fd_rmse_hz": 103.8045274584338,
+      "peak_to_second_db": 0.026314009092762533,
+      "loss_fraction": 0.03414277889355487,
+      "spectrum_png": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/single_channel/receiver_spectra/22p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "31p0GHz",
+      "frequency_hz": 31000000000.0,
+      "tau_rmse_ns": 534.1803886423163,
+      "fd_rmse_hz": 94.74132718217358,
+      "peak_to_second_db": 0.130765279096674,
+      "loss_fraction": 0.0052492240277524195,
+      "spectrum_png": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/single_channel/receiver_spectra/31p0GHz_receiver_spectrum.png"
+    }
+  ],
+  "outputs": {
+    "results_dir": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/single_channel",
+    "summary_csv": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/single_channel/frequency_summary.csv",
+    "overview_png": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/single_channel/wkb_multifreq_overview.png",
+    "frequency_summary_png": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/single_channel/wkb_multifreq_frequency_summary.png",
+    "spectrum_dir": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/single_channel/receiver_spectra",
+    "frequency_detail_dir": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/single_channel/frequency_details"
+  }
+}

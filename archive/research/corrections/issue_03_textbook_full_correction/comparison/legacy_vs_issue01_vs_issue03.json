@@ -1,0 +1,61 @@
+{
+  "frequencies_hz": [
+    19000000000.0,
+    19500000000.0,
+    20000000000.0,
+    20500000000.0,
+    21000000000.0,
+    21500000000.0,
+    22000000000.0,
+    22500000000.0,
+    23000000000.0,
+    23500000000.0,
+    24000000000.0,
+    24500000000.0,
+    25000000000.0,
+    25500000000.0,
+    26000000000.0,
+    26500000000.0,
+    27000000000.0,
+    27500000000.0,
+    28000000000.0,
+    28500000000.0,
+    29000000000.0,
+    29500000000.0,
+    30000000000.0,
+    30500000000.0,
+    31000000000.0
+  ],
+  "metrics": {
+    "single_tau_rmse_ns": {
+      "mean_delta_issue01_vs_legacy": 3913.059035670584,
+      "mean_delta_issue03_vs_issue01": 9584.076385466185,
+      "mean_delta_issue03_vs_legacy": 13497.135421136769
+    },
+    "single_fd_rmse_hz": {
+      "mean_delta_issue01_vs_legacy": 1529.810418881369,
+      "mean_delta_issue03_vs_issue01": 5721.196361484403,
+      "mean_delta_issue03_vs_legacy": 7251.006780365773
+    },
+    "wls_case_b_wls_position_error_3d_m": {
+      "mean_delta_issue01_vs_legacy": 1543.994270896427,
+      "mean_delta_issue03_vs_issue01": 2508.3140871228843,
+      "mean_delta_issue03_vs_legacy": 4052.308358019311
+    },
+    "ekf_pr_doppler_mean_position_error_3d_m": {
+      "mean_delta_issue01_vs_legacy": 39773.6980231739,
+      "mean_delta_issue03_vs_issue01": 54314.18857481331,
+      "mean_delta_issue03_vs_legacy": 94087.8865979872
+    },
+    "ekf_pr_doppler_mean_velocity_error_3d_mps": {
+      "mean_delta_issue01_vs_legacy": 4328.8283199000925,
+      "mean_delta_issue03_vs_issue01": 4724.640578421299,
+      "mean_delta_issue03_vs_legacy": 9053.468898321391
+    }
+  },
+  "roots": {
+    "legacy": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/results_ka_multifreq",
+    "issue01": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack",
+    "issue03": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack"
+  }
+}

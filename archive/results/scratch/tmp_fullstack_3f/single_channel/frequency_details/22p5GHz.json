@@ -1,0 +1,33 @@
+{
+  "label": "22p5GHz",
+  "frequency_hz": 22500000000.0,
+  "metrics": {
+    "tau_rmse_ns": 570.7377705234369,
+    "fd_rmse_hz": 103.8045274584338,
+    "peak_to_second_ratio": 1.0060774175255327,
+    "peak_to_second_db": 0.026314009092762533,
+    "loss_found": false,
+    "loss_fraction": 0.03414277889355487,
+    "pll_integrator_clamped": 0,
+    "pll_freq_clamped": 0,
+    "tau_g_median_m": 0.1446362565907477,
+    "tau_g_span_m": 0.03581385304068961,
+    "pseudorange_mean_m": 116843.9366370703,
+    "doppler_mean_hz": 28282.01795239254,
+    "carrier_phase_mean_cycles": 381818.694139927,
+    "post_corr_snr_median_db": 16.763745563665616,
+    "carrier_lock_metric_median": 0.9051295897470824
+  },
+  "wkb": {
+    "amplitude_median": 0.912109178984261,
+    "attenuation_db_median": -0.7990636830407809,
+    "phase_rad_median": -64.03847006970109,
+    "group_delay_ns_median": 0.4824546206254051
+  },
+  "samples": {
+    "pseudorange": 21908,
+    "carrier_phase": 21908,
+    "doppler": 21908
+  },
+  "spectrum_png": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/single_channel/receiver_spectra/22p5GHz_receiver_spectrum.png"
+}

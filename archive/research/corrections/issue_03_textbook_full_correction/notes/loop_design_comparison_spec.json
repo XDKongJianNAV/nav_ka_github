@@ -1,0 +1,93 @@
+{
+  "title": "环路设计前后对比与教材标准对照",
+  "subtitle": "左：原始实现  中：修改后的教材修正版  右：教材标准结构",
+  "panels": [
+    {
+      "id": "legacy",
+      "title": "原始实现",
+      "theme": "warn",
+      "nodes": [
+        {"id": "rx", "row": 0, "title": "接收信号块", "subtitle": "传播项、码、载波"},
+        {"id": "wipeoff", "row": 1, "title": "本地载波去旋", "subtitle": "直接进入相关"},
+        {"id": "corr", "row": 2, "title": "相关器", "subtitle": "Early / Prompt / Late"},
+        {"id": "disc", "row": 3, "title": "判别器", "subtitle": "非相干 DLL + Costas PLL"},
+        {"id": "update", "row": 4, "title": "整体更新律", "subtitle": "PI + FLL + 真值辅助"},
+        {"id": "nco", "row": 5, "title": "码 NCO / 载波 NCO", "subtitle": "状态回送到相关器"},
+        {"id": "obs", "row": 6, "title": "内部状态直接叫作观测", "subtitle": "伪距 / 多普勒 / 载波相位"}
+      ],
+      "edges": [
+        {"from": "rx", "to": "wipeoff", "kind": "main"},
+        {"from": "wipeoff", "to": "corr", "kind": "main"},
+        {"from": "corr", "to": "disc", "kind": "main"},
+        {"from": "disc", "to": "update", "kind": "main"},
+        {"from": "update", "to": "nco", "kind": "main"},
+        {"from": "nco", "to": "corr", "kind": "feedback"},
+        {"from": "nco", "to": "wipeoff", "kind": "feedback"},
+        {"from": "nco", "to": "obs", "kind": "main"}
+      ],
+      "callouts": [
+        {"text": "真值码率辅助", "target": "update", "side": "left"},
+        {"text": "真值频率辅助", "target": "update", "side": "right"}
+      ],
+      "footer": "问题：真值辅助进入环路，控制律与观测层混在一起"
+    },
+    {
+      "id": "corrected",
+      "title": "修改后的教材修正版",
+      "theme": "good",
+      "nodes": [
+        {"id": "rx", "row": 0, "title": "接收信号块", "subtitle": "真实含导航数据"},
+        {"id": "wipeoff", "row": 1, "title": "本地载波去旋", "subtitle": "形成基带"},
+        {"id": "corr", "row": 2, "title": "相关器", "subtitle": "Early / Prompt / Late"},
+        {"id": "disc", "row": 3, "title": "判别器", "subtitle": "码环误差 + Costas / FLL"},
+        {"id": "update", "row": 4, "title": "分离的环路更新", "subtitle": "码环更新  /  载波环更新"},
+        {"id": "nco", "row": 5, "title": "码 NCO / 载波 NCO", "subtitle": "相位与频率显式更新"},
+        {"id": "natural", "row": 6, "title": "自然测量量层", "subtitle": "码时延 / 载波相位 / 载波频率"},
+        {"id": "obs", "row": 7, "title": "标准观测形成层", "subtitle": "伪距 / 载波相位 / 距离率"}
+      ],
+      "edges": [
+        {"from": "rx", "to": "wipeoff", "kind": "main"},
+        {"from": "wipeoff", "to": "corr", "kind": "main"},
+        {"from": "corr", "to": "disc", "kind": "main"},
+        {"from": "disc", "to": "update", "kind": "main"},
+        {"from": "update", "to": "nco", "kind": "main"},
+        {"from": "nco", "to": "corr", "kind": "feedback"},
+        {"from": "nco", "to": "wipeoff", "kind": "feedback"},
+        {"from": "nco", "to": "natural", "kind": "main"},
+        {"from": "natural", "to": "obs", "kind": "main"}
+      ],
+      "callouts": [
+        {"text": "不再注入真值辅助", "target": "update", "side": "right"},
+        {"text": "前一时刻 Prompt 用于短时 FLL", "target": "disc", "side": "right"}
+      ],
+      "footer": "关键变化：去掉真值辅助，并把自然测量量与标准观测量拆开"
+    },
+    {
+      "id": "textbook",
+      "title": "教材标准结构",
+      "theme": "neutral",
+      "nodes": [
+        {"id": "rx", "row": 0, "title": "接收信号", "subtitle": "进入接收机前端"},
+        {"id": "wipeoff", "row": 1, "title": "本地复制信号", "subtitle": "本地载波与本地码"},
+        {"id": "corr", "row": 2, "title": "相关器组", "subtitle": "Early / Prompt / Late"},
+        {"id": "disc", "row": 3, "title": "判别器", "subtitle": "码环误差 / 相位误差"},
+        {"id": "filter", "row": 4, "title": "环路滤波器", "subtitle": "输出控制量"},
+        {"id": "nco", "row": 5, "title": "数控振荡器", "subtitle": "更新本地复制状态"},
+        {"id": "natural", "row": 6, "title": "自然测量量", "subtitle": "码相位 / 载波相位 / 载波频率"}
+      ],
+      "edges": [
+        {"from": "rx", "to": "corr", "kind": "main"},
+        {"from": "wipeoff", "to": "corr", "kind": "main"},
+        {"from": "corr", "to": "disc", "kind": "main"},
+        {"from": "disc", "to": "filter", "kind": "main"},
+        {"from": "filter", "to": "nco", "kind": "main"},
+        {"from": "nco", "to": "wipeoff", "kind": "feedback"},
+        {"from": "nco", "to": "natural", "kind": "main"}
+      ],
+      "callouts": [
+        {"text": "教材重点：先有自然测量量，再进入观测形成层", "target": "natural", "side": "right"}
+      ],
+      "footer": "标准思路：输入是接收信号，输出先是自然测量量"
+    }
+  ]
+}

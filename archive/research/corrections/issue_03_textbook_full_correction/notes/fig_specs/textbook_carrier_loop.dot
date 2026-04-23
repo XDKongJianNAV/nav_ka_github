@@ -1,0 +1,19 @@
+digraph textbook_carrier_loop {
+  graph [rankdir=LR, splines=polyline, nodesep=0.55, ranksep=0.75, bgcolor="white", margin=0.2];
+  node [shape=box, style="rounded", fontname="PingFang SC", fontsize=14, color="#333333", penwidth=1.2, margin="0.18,0.10"];
+  edge [fontname="PingFang SC", fontsize=12, color="#444444", penwidth=1.1, arrowsize=0.8];
+
+  rx [label="准时相关输出"];
+  costas [label="Costas 判别器\n相位误差"];
+  fll [label="FLL 辅助\n频率误差"];
+  sum [label="环路组合与滤波"];
+  nco [label="载波 NCO"];
+  carr [label="本地载波"];
+  phase [label="载波相位累计量"];
+  freq [label="载波频率估计"];
+
+  rx -> costas -> sum -> nco -> carr -> rx;
+  rx -> fll -> sum;
+  sum -> phase;
+  sum -> freq;
+}

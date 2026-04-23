@@ -1,0 +1,33 @@
+{
+  "label": "29p5GHz",
+  "frequency_hz": 29500000000.0,
+  "metrics": {
+    "tau_rmse_ns": 537.601427460451,
+    "fd_rmse_hz": 95.75936200771396,
+    "peak_to_second_ratio": 1.0029716632731183,
+    "peak_to_second_db": 0.01288663171998948,
+    "loss_found": false,
+    "loss_fraction": 0.006344714259631185,
+    "pll_integrator_clamped": 0,
+    "pll_freq_clamped": 0,
+    "tau_g_median_m": 0.1425016987290388,
+    "tau_g_span_m": 0.027127120556470277,
+    "pseudorange_mean_m": 116864.88858186272,
+    "doppler_mean_hz": 28281.91403677048,
+    "carrier_phase_mean_cycles": 381818.5794726791,
+    "post_corr_snr_median_db": 17.23862639242814,
+    "carrier_lock_metric_median": 0.9266409725453595
+  },
+  "wkb": {
+    "amplitude_median": 0.9498280483192993,
+    "attenuation_db_median": -0.4471002422839916,
+    "phase_rad_median": -85.06486703775482,
+    "group_delay_ns_median": 0.47533450200751487
+  },
+  "samples": {
+    "pseudorange": 21908,
+    "carrier_phase": 21908,
+    "doppler": 21908
+  },
+  "spectrum_png": "/home/guo/src/nav_ka_github/results_ka_multifreq/single_channel/receiver_spectra/29p5GHz_receiver_spectrum.png"
+}

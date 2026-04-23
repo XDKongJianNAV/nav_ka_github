@@ -1,0 +1,53 @@
+{
+  "issue_id": "issue_03_textbook_full_correction",
+  "execution_command": "uv run python notebooks/run_issue_03_textbook_full_correction.py",
+  "frequencies_hz": [
+    19000000000.0,
+    19500000000.0,
+    20000000000.0,
+    20500000000.0,
+    21000000000.0,
+    21500000000.0,
+    22000000000.0,
+    22500000000.0,
+    23000000000.0,
+    23500000000.0,
+    24000000000.0,
+    24500000000.0,
+    25000000000.0,
+    25500000000.0,
+    26000000000.0,
+    26500000000.0,
+    27000000000.0,
+    27500000000.0,
+    28000000000.0,
+    28500000000.0,
+    29000000000.0,
+    29500000000.0,
+    30000000000.0,
+    30500000000.0,
+    31000000000.0
+  ],
+  "textbook_correction": {
+    "truth_free_runtime": true,
+    "truth_free_initialization": true,
+    "channel_background_mode": "issue03_textbook",
+    "nav_data_enabled": true,
+    "layer_chain": [
+      "signal_model",
+      "receiver_natural_measurements",
+      "observable_formation",
+      "navigation_estimators"
+    ]
+  },
+  "outputs": {
+    "corrected_root": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack",
+    "single_channel_dir": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel",
+    "observables_dir": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/observables",
+    "wls_dir": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/wls",
+    "ekf_dir": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/ekf",
+    "cross_frequency_dir": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/cross_frequency",
+    "report_summary_md": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/report_summary.md",
+    "report_full_md": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/report_full.md"
+  }
+}

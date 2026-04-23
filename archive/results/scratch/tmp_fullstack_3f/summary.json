@@ -1,0 +1,22 @@
+{
+  "frequencies_hz": [
+    19000000000.0,
+    22500000000.0,
+    31000000000.0
+  ],
+  "frequency_labels": [
+    "19p0GHz",
+    "22p5GHz",
+    "31p0GHz"
+  ],
+  "outputs": {
+    "results_root": "/home/guo/src/nav_ka_github/tmp_fullstack_3f",
+    "single_channel_dir": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/single_channel",
+    "wls_dir": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/wls",
+    "ekf_dir": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/ekf",
+    "cross_frequency_dir": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/cross_frequency",
+    "combined_csv": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/cross_frequency/combined_metrics.csv",
+    "combined_json": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/cross_frequency/combined_metrics.json",
+    "combined_plot": "/home/guo/src/nav_ka_github/tmp_fullstack_3f/cross_frequency/combined_metrics_vs_frequency.png"
+  }
+}

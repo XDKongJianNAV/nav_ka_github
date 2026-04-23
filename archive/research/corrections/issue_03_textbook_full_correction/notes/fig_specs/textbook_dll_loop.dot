@@ -1,0 +1,16 @@
+digraph textbook_dll_loop {
+  graph [rankdir=LR, splines=polyline, nodesep=0.55, ranksep=0.7, bgcolor="white", margin=0.2];
+  node [shape=box, style="rounded", fontname="PingFang SC", fontsize=14, color="#333333", penwidth=1.2, margin="0.18,0.10"];
+  edge [fontname="PingFang SC", fontsize=12, color="#444444", penwidth=1.1, arrowsize=0.8];
+
+  rx [label="接收复基带"];
+  corr [label="早 / 准 / 晚相关器"];
+  disc [label="DLL 判别器\n早晚门差分"];
+  lf [label="码环滤波器"];
+  nco [label="码 NCO"];
+  code [label="本地码发生器"];
+  tau [label="码时延估计"];
+
+  rx -> corr -> disc -> lf -> nco -> code -> corr;
+  lf -> tau;
+}

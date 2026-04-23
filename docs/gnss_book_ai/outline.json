@@ -1,0 +1,710 @@
+[
+  {
+    "level": 1,
+    "title": "Contents",
+    "page_number": 3,
+    "slug": "contents"
+  },
+  {
+    "level": 1,
+    "title": "Preface",
+    "page_number": 14,
+    "slug": "preface"
+  },
+  {
+    "level": 1,
+    "title": "Introduction",
+    "page_number": 16,
+    "slug": "introduction"
+  },
+  {
+    "level": 2,
+    "title": "Introduction",
+    "page_number": 16,
+    "slug": "introduction"
+  },
+  {
+    "level": 2,
+    "title": "GNSS Overview",
+    "page_number": 17,
+    "slug": "gnss-overview"
+  },
+  {
+    "level": 2,
+    "title": "Global Positioning System",
+    "page_number": 18,
+    "slug": "global-positioning-system"
+  },
+  {
+    "level": 2,
+    "title": "Russian GLONASS System",
+    "page_number": 19,
+    "slug": "russian-glonass-system"
+  },
+  {
+    "level": 2,
+    "title": "Galileo Satellite System",
+    "page_number": 20,
+    "slug": "galileo-satellite-system"
+  },
+  {
+    "level": 2,
+    "title": "Chinese BeiDou System",
+    "page_number": 22,
+    "slug": "chinese-beidou-system"
+  },
+  {
+    "level": 2,
+    "title": "Regional Systems",
+    "page_number": 23,
+    "slug": "regional-systems"
+  },
+  {
+    "level": 2,
+    "title": "Augmentations",
+    "page_number": 25,
+    "slug": "augmentations"
+  },
+  {
+    "level": 2,
+    "title": "Markets and Applications",
+    "page_number": 26,
+    "slug": "markets-and-applications"
+  },
+  {
+    "level": 2,
+    "title": "Organization of the Book",
+    "page_number": 27,
+    "slug": "organization-of-the-book"
+  },
+  {
+    "level": 1,
+    "title": "Fundamentals of Satellite Navigation",
+    "page_number": 34,
+    "slug": "fundamentals-of-satellite-navigation"
+  },
+  {
+    "level": 2,
+    "title": "Concept of Ranging Using Time-of-Arrival Measurements",
+    "page_number": 34,
+    "slug": "concept-of-ranging-using-time-of-arrival-measurements"
+  },
+  {
+    "level": 2,
+    "title": "Reference Coordinate Systems",
+    "page_number": 39,
+    "slug": "reference-coordinate-systems"
+  },
+  {
+    "level": 2,
+    "title": "Fundamentals of Satellite Orbits",
+    "page_number": 52,
+    "slug": "fundamentals-of-satellite-orbits"
+  },
+  {
+    "level": 2,
+    "title": "GNSS Signals",
+    "page_number": 67,
+    "slug": "gnss-signals"
+  },
+  {
+    "level": 2,
+    "title": "Positioning Determination Using Ranging Codes",
+    "page_number": 80,
+    "slug": "positioning-determination-using-ranging-codes"
+  },
+  {
+    "level": 2,
+    "title": "Obtaining User Velocity",
+    "page_number": 88,
+    "slug": "obtaining-user-velocity"
+  },
+  {
+    "level": 2,
+    "title": "Frequency Sources, Time, and GNSS",
+    "page_number": 91,
+    "slug": "frequency-sources-time-and-gnss"
+  },
+  {
+    "level": 1,
+    "title": "Global Positioning System",
+    "page_number": 104,
+    "slug": "global-positioning-system"
+  },
+  {
+    "level": 2,
+    "title": "Overview",
+    "page_number": 104,
+    "slug": "overview"
+  },
+  {
+    "level": 2,
+    "title": "Space Segment Description",
+    "page_number": 106,
+    "slug": "space-segment-description"
+  },
+  {
+    "level": 2,
+    "title": "Control Segment Description",
+    "page_number": 132,
+    "slug": "control-segment-description"
+  },
+  {
+    "level": 2,
+    "title": "User Segment",
+    "page_number": 152,
+    "slug": "user-segment"
+  },
+  {
+    "level": 2,
+    "title": "GPS Geodesy and Time Scale",
+    "page_number": 157,
+    "slug": "gps-geodesy-and-time-scale"
+  },
+  {
+    "level": 2,
+    "title": "Services",
+    "page_number": 160,
+    "slug": "services"
+  },
+  {
+    "level": 2,
+    "title": "GPS Signals",
+    "page_number": 165,
+    "slug": "gps-signals"
+  },
+  {
+    "level": 2,
+    "title": "GPS Ephemeris Parameters and Satellite Position Computation",
+    "page_number": 195,
+    "slug": "gps-ephemeris-parameters-and-satellite-position-computation"
+  },
+  {
+    "level": 1,
+    "title": "GLONASS",
+    "page_number": 205,
+    "slug": "glonass"
+  },
+  {
+    "level": 2,
+    "title": "Introduction",
+    "page_number": 205,
+    "slug": "introduction"
+  },
+  {
+    "level": 2,
+    "title": "Space Segment",
+    "page_number": 206,
+    "slug": "space-segment"
+  },
+  {
+    "level": 2,
+    "title": "Ground Segment",
+    "page_number": 212,
+    "slug": "ground-segment"
+  },
+  {
+    "level": 2,
+    "title": "GLONASS User Equipment",
+    "page_number": 214,
+    "slug": "glonass-user-equipment"
+  },
+  {
+    "level": 2,
+    "title": "Geodesy and Time Systems",
+    "page_number": 215,
+    "slug": "geodesy-and-time-systems"
+  },
+  {
+    "level": 2,
+    "title": "Navigation Services",
+    "page_number": 217,
+    "slug": "navigation-services"
+  },
+  {
+    "level": 2,
+    "title": "Navigation Signals",
+    "page_number": 218,
+    "slug": "navigation-signals"
+  },
+  {
+    "level": 2,
+    "title": "Acknowledgments",
+    "page_number": 227,
+    "slug": "acknowledgments"
+  },
+  {
+    "level": 1,
+    "title": "Galileo",
+    "page_number": 231,
+    "slug": "galileo"
+  },
+  {
+    "level": 2,
+    "title": "Program Overview and Objectives",
+    "page_number": 231,
+    "slug": "program-overview-and-objectives"
+  },
+  {
+    "level": 2,
+    "title": "Galileo Implementation",
+    "page_number": 232,
+    "slug": "galileo-implementation"
+  },
+  {
+    "level": 2,
+    "title": "Galileo Services",
+    "page_number": 233,
+    "slug": "galileo-services"
+  },
+  {
+    "level": 2,
+    "title": "System Overview",
+    "page_number": 235,
+    "slug": "system-overview"
+  },
+  {
+    "level": 2,
+    "title": "Galileo Signal Characteristics",
+    "page_number": 254,
+    "slug": "galileo-signal-characteristics"
+  },
+  {
+    "level": 2,
+    "title": "Interoperability",
+    "page_number": 262,
+    "slug": "interoperability"
+  },
+  {
+    "level": 2,
+    "title": "Galileo Search and Rescue Mission",
+    "page_number": 264,
+    "slug": "galileo-search-and-rescue-mission"
+  },
+  {
+    "level": 2,
+    "title": "Galileo System Performance",
+    "page_number": 273,
+    "slug": "galileo-system-performance"
+  },
+  {
+    "level": 2,
+    "title": "System Deployment Completion up to FOC",
+    "page_number": 281,
+    "slug": "system-deployment-completion-up-to-foc"
+  },
+  {
+    "level": 2,
+    "title": "Galileo Evolution Beyond FOC",
+    "page_number": 283,
+    "slug": "galileo-evolution-beyond-foc"
+  },
+  {
+    "level": 1,
+    "title": "BeiDou Navigation Satellite System (BDS)",
+    "page_number": 286,
+    "slug": "beidou-navigation-satellite-system-bds"
+  },
+  {
+    "level": 2,
+    "title": "Overview",
+    "page_number": 286,
+    "slug": "overview"
+  },
+  {
+    "level": 2,
+    "title": "BDS Space Segment",
+    "page_number": 294,
+    "slug": "bds-space-segment"
+  },
+  {
+    "level": 2,
+    "title": "BDS Control Segment",
+    "page_number": 300,
+    "slug": "bds-control-segment"
+  },
+  {
+    "level": 2,
+    "title": "Geodesy and Time Systems",
+    "page_number": 303,
+    "slug": "geodesy-and-time-systems"
+  },
+  {
+    "level": 2,
+    "title": "The BDS Services",
+    "page_number": 304,
+    "slug": "the-bds-services"
+  },
+  {
+    "level": 2,
+    "title": "BDS Signals",
+    "page_number": 310,
+    "slug": "bds-signals"
+  },
+  {
+    "level": 1,
+    "title": "Regional SATNAV Systems",
+    "page_number": 326,
+    "slug": "regional-satnav-systems"
+  },
+  {
+    "level": 2,
+    "title": "Quasi-Zenith Satellite System",
+    "page_number": 326,
+    "slug": "quasi-zenith-satellite-system"
+  },
+  {
+    "level": 2,
+    "title": "Navigation with Indian Constellation (NavIC)",
+    "page_number": 338,
+    "slug": "navigation-with-indian-constellation-navic"
+  },
+  {
+    "level": 1,
+    "title": "GNSS Receivers",
+    "page_number": 352,
+    "slug": "gnss-receivers"
+  },
+  {
+    "level": 2,
+    "title": "Overview",
+    "page_number": 352,
+    "slug": "overview"
+  },
+  {
+    "level": 2,
+    "title": "Antennas",
+    "page_number": 357,
+    "slug": "antennas"
+  },
+  {
+    "level": 2,
+    "title": "Front End",
+    "page_number": 369,
+    "slug": "front-end"
+  },
+  {
+    "level": 2,
+    "title": "Digital Channels",
+    "page_number": 390,
+    "slug": "digital-channels"
+  },
+  {
+    "level": 2,
+    "title": "Acquisition",
+    "page_number": 437,
+    "slug": "acquisition"
+  },
+  {
+    "level": 2,
+    "title": "Carrier Tracking",
+    "page_number": 458,
+    "slug": "carrier-tracking"
+  },
+  {
+    "level": 2,
+    "title": "Code Tracking",
+    "page_number": 465,
+    "slug": "code-tracking"
+  },
+  {
+    "level": 2,
+    "title": "Loop Filters",
+    "page_number": 472,
+    "slug": "loop-filters"
+  },
+  {
+    "level": 2,
+    "title": "Measurement Errors and Tracking Thresholds",
+    "page_number": 487,
+    "slug": "measurement-errors-and-tracking-thresholds"
+  },
+  {
+    "level": 2,
+    "title": "Formation of Pseudorange, Delta Pseudorange, and Integrated  Doppler",
+    "page_number": 508,
+    "slug": "formation-of-pseudorange-delta-pseudorange-and-integrated-doppler"
+  },
+  {
+    "level": 2,
+    "title": "Sequence of Initial Receiver Operations",
+    "page_number": 527,
+    "slug": "sequence-of-initial-receiver-operations"
+  },
+  {
+    "level": 2,
+    "title": "Data Demodulation",
+    "page_number": 530,
+    "slug": "data-demodulation"
+  },
+  {
+    "level": 2,
+    "title": "Special Baseband Functions",
+    "page_number": 539,
+    "slug": "special-baseband-functions"
+  },
+  {
+    "level": 1,
+    "title": "GNSS Disruptions",
+    "page_number": 562,
+    "slug": "gnss-disruptions"
+  },
+  {
+    "level": 2,
+    "title": "Overview",
+    "page_number": 562,
+    "slug": "overview"
+  },
+  {
+    "level": 2,
+    "title": "Interference",
+    "page_number": 563,
+    "slug": "interference"
+  },
+  {
+    "level": 2,
+    "title": "Ionospheric Scintillation",
+    "page_number": 601,
+    "slug": "ionospheric-scintillation"
+  },
+  {
+    "level": 2,
+    "title": "Signal Blockage",
+    "page_number": 604,
+    "slug": "signal-blockage"
+  },
+  {
+    "level": 2,
+    "title": "Multipath",
+    "page_number": 612,
+    "slug": "multipath"
+  },
+  {
+    "level": 1,
+    "title": "GNSS Errors",
+    "page_number": 631,
+    "slug": "gnss-errors"
+  },
+  {
+    "level": 2,
+    "title": "Introduction",
+    "page_number": 631,
+    "slug": "introduction"
+  },
+  {
+    "level": 2,
+    "title": "Measurement Errors",
+    "page_number": 632,
+    "slug": "measurement-errors"
+  },
+  {
+    "level": 2,
+    "title": "Pseudorange Error Budgets",
+    "page_number": 668,
+    "slug": "pseudorange-error-budgets"
+  },
+  {
+    "level": 1,
+    "title": "Performance of Stand-alone GNSS",
+    "page_number": 672,
+    "slug": "performance-of-stand-alone-gnss"
+  },
+  {
+    "level": 2,
+    "title": "Introduction",
+    "page_number": 672,
+    "slug": "introduction"
+  },
+  {
+    "level": 2,
+    "title": "Position, Velocity, and Time Estimation Concepts",
+    "page_number": 673,
+    "slug": "position-velocity-and-time-estimation-concepts"
+  },
+  {
+    "level": 2,
+    "title": "GNSS Availability",
+    "page_number": 690,
+    "slug": "gnss-availability"
+  },
+  {
+    "level": 2,
+    "title": "GNSS Integrity",
+    "page_number": 699,
+    "slug": "gnss-integrity"
+  },
+  {
+    "level": 2,
+    "title": "Continuity",
+    "page_number": 715,
+    "slug": "continuity"
+  },
+  {
+    "level": 1,
+    "title": "Differential GNSS & Precise Point Positioning",
+    "page_number": 719,
+    "slug": "differential-gnss-precise-point-positioning"
+  },
+  {
+    "level": 2,
+    "title": "Introduction",
+    "page_number": 719,
+    "slug": "introduction"
+  },
+  {
+    "level": 2,
+    "title": "Code-Based DGNSS",
+    "page_number": 721,
+    "slug": "code-based-dgnss"
+  },
+  {
+    "level": 2,
+    "title": "Carrier-Based DGNSS",
+    "page_number": 728,
+    "slug": "carrier-based-dgnss"
+  },
+  {
+    "level": 2,
+    "title": "Precise Point Positioning",
+    "page_number": 756,
+    "slug": "precise-point-positioning"
+  },
+  {
+    "level": 2,
+    "title": "RTCM SC-104 Message Formats",
+    "page_number": 763,
+    "slug": "rtcm-sc-104-message-formats"
+  },
+  {
+    "level": 2,
+    "title": "DGNSS and PPP Examples",
+    "page_number": 767,
+    "slug": "dgnss-and-ppp-examples"
+  },
+  {
+    "level": 1,
+    "title": "Integration of GNSS with other Sensors & Network Assistance",
+    "page_number": 799,
+    "slug": "integration-of-gnss-with-other-sensors-network-assistance"
+  },
+  {
+    "level": 2,
+    "title": "Overview",
+    "page_number": 799,
+    "slug": "overview"
+  },
+  {
+    "level": 2,
+    "title": "GNSS/Inertial Integration",
+    "page_number": 800,
+    "slug": "gnss-inertial-integration"
+  },
+  {
+    "level": 2,
+    "title": "Sensor Integration in Land Vehicle Systems",
+    "page_number": 836,
+    "slug": "sensor-integration-in-land-vehicle-systems"
+  },
+  {
+    "level": 2,
+    "title": "A-GNSS: Network Based Acquisition and Location Assistance",
+    "page_number": 869,
+    "slug": "a-gnss-network-based-acquisition-and-location-assistance"
+  },
+  {
+    "level": 2,
+    "title": "Hybrid Positioning in Mobile Devices",
+    "page_number": 905,
+    "slug": "hybrid-positioning-in-mobile-devices"
+  },
+  {
+    "level": 1,
+    "title": "GNSS Markets & Applications",
+    "page_number": 925,
+    "slug": "gnss-markets-applications"
+  },
+  {
+    "level": 2,
+    "title": "GNSS: A Complex Market Based on Enabling Technologies",
+    "page_number": 925,
+    "slug": "gnss-a-complex-market-based-on-enabling-technologies"
+  },
+  {
+    "level": 2,
+    "title": "Civil Applications of GNSS",
+    "page_number": 934,
+    "slug": "civil-applications-of-gnss"
+  },
+  {
+    "level": 2,
+    "title": "Government and Military Applications",
+    "page_number": 945,
+    "slug": "government-and-military-applications"
+  },
+  {
+    "level": 2,
+    "title": "Conclusions",
+    "page_number": 948,
+    "slug": "conclusions"
+  },
+  {
+    "level": 1,
+    "title": "Least Squares & Weighted Least Squares Estimates",
+    "page_number": 950,
+    "slug": "least-squares-weighted-least-squares-estimates"
+  },
+  {
+    "level": 1,
+    "title": "Stability Measures for Frequency Sources",
+    "page_number": 952,
+    "slug": "stability-measures-for-frequency-sources"
+  },
+  {
+    "level": 2,
+    "title": "B.1  Introduction",
+    "page_number": 952,
+    "slug": "b-1-introduction"
+  },
+  {
+    "level": 2,
+    "title": "B.2  Frequency Standard Stability",
+    "page_number": 952,
+    "slug": "b-2-frequency-standard-stability"
+  },
+  {
+    "level": 2,
+    "title": "B.3  Measures of Stability",
+    "page_number": 953,
+    "slug": "b-3-measures-of-stability"
+  },
+  {
+    "level": 1,
+    "title": "Free-Space Propagation Loss",
+    "page_number": 956,
+    "slug": "free-space-propagation-loss"
+  },
+  {
+    "level": 2,
+    "title": "C.1  Introduction",
+    "page_number": 956,
+    "slug": "c-1-introduction"
+  },
+  {
+    "level": 2,
+    "title": "C.2  Free-Space Propagation Loss",
+    "page_number": 956,
+    "slug": "c-2-free-space-propagation-loss"
+  },
+  {
+    "level": 2,
+    "title": "C.3  Conversion Between Power Spectral Densities and Power Flux  Densities",
+    "page_number": 960,
+    "slug": "c-3-conversion-between-power-spectral-densities-and-power-flux-densities"
+  },
+  {
+    "level": 1,
+    "title": "Index",
+    "page_number": 961,
+    "slug": "index"
+  }
+]

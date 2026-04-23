@@ -1,0 +1,48 @@
+{
+  "scenario": {
+    "label": "h80km_v7.90kms_18p7GHz",
+    "height_km": 80.0,
+    "speed_kms": 7.9,
+    "carrier_frequency_hz": 18700000000.0,
+    "duration_s": 22.0
+  },
+  "imu_profile": {
+    "imu_rate_hz": 200.0,
+    "gyro_bias_in_run_degph": 0.005,
+    "gyro_arw_deg_rt_hr": 0.003,
+    "accel_bias_in_run_mg": 0.03,
+    "accel_vrw_mps_rt_hr": 0.02
+  },
+  "single_channel": {
+    "tau_rmse_ns": 34563.62890039522,
+    "fd_rmse_hz": 37249.51857966264,
+    "effective_pseudorange_sigma_1s_m": 10458.06834654789,
+    "imu_code_aiding_rate_mean": -0.21561348980210215,
+    "imu_carrier_aiding_rate_mean": 753.2476962279611,
+    "aiding_fraction": 1.0,
+    "motion_profile_source": "issue04 mechanized INS front-end motion profile",
+    "aiding_profile_source": "issue04 INS-derived scalar DLL/PLL feedback profile"
+  },
+  "ins_diagnostics": {
+    "ins_mean_position_error_3d_m": 1.4757710792027785,
+    "ins_mean_velocity_error_3d_mps": 0.13578583911859327,
+    "ins_mean_attitude_error_deg": 0.0014139111567694422,
+    "ins_final_position_error_3d_m": 2.976331185288105,
+    "ins_final_velocity_error_3d_mps": 0.013845626156646059,
+    "ins_final_attitude_error_deg": 0.0005473934294883355,
+    "ins_aiding_truth_bypassed": true
+  },
+  "dynamic_navigation": {
+    "num_epochs": 219,
+    "mean_wls_position_error_3d_m": 46860.57280801675,
+    "mean_ekf_position_error_3d_m": 99.23354302596046,
+    "mean_ekf_velocity_error_3d_mps": 2.2135180953059934,
+    "valid_wls_epochs": 28,
+    "prediction_only_epochs": 191
+  },
+  "outputs": {
+    "dynamic_observations_csv": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/archive/research/corrections/issue_04_imu_aided/corrected_fullstack/h80km_v7.90kms_18p7GHz/dynamic_observations.csv",
+    "dynamic_state_history_csv": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/archive/research/corrections/issue_04_imu_aided/corrected_fullstack/h80km_v7.90kms_18p7GHz/dynamic_state_history.csv",
+    "imu_ins_state_csv": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/archive/research/corrections/issue_04_imu_aided/corrected_fullstack/h80km_v7.90kms_18p7GHz/imu_ins_state.csv"
+  }
+}

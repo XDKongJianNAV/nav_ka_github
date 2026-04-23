@@ -1,0 +1,22 @@
+digraph textbook_receiver_chain {
+  graph [rankdir=LR, splines=polyline, nodesep=0.5, ranksep=0.7, bgcolor="white", margin=0.2];
+  node [shape=box, style="rounded", fontname="PingFang SC", fontsize=14, color="#333333", penwidth=1.2, margin="0.18,0.10"];
+  edge [fontname="PingFang SC", fontsize=12, color="#444444", penwidth=1.1, arrowsize=0.8];
+
+  rx [label="接收复信号"];
+  acq [label="捕获\n粗码时延 / 粗频偏"];
+  wipeoff [label="本地载波去旋"];
+  corr [label="相关器\n早 / 准 / 晚"];
+  disc [label="判别器\n码误差 / 载波误差"];
+  lf [label="环路滤波器"];
+  nco [label="数控振荡器\n本地码 / 本地载波"];
+  nat [label="自然测量量\n码时延估计\n载波相位累计量\n载波频率估计"];
+  obs [label="观测形成\n时标解释 / 波长换算 / 符号约定"];
+  std [label="标准观测量\n伪距 / 载波相位 / 距离率"];
+
+  rx -> acq -> wipeoff -> corr -> disc -> lf -> nco;
+  nco -> wipeoff [label="本地载波"];
+  nco -> corr [label="本地码"];
+  lf -> nat;
+  nat -> obs -> std;
+}

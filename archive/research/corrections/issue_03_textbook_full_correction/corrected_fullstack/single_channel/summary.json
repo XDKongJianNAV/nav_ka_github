@@ -1,0 +1,304 @@
+{
+  "title": "Issue 03 textbook-corrected single-channel Ka receiver sweep",
+  "frequencies_hz": [
+    19000000000.0,
+    19500000000.0,
+    20000000000.0,
+    20500000000.0,
+    21000000000.0,
+    21500000000.0,
+    22000000000.0,
+    22500000000.0,
+    23000000000.0,
+    23500000000.0,
+    24000000000.0,
+    24500000000.0,
+    25000000000.0,
+    25500000000.0,
+    26000000000.0,
+    26500000000.0,
+    27000000000.0,
+    27500000000.0,
+    28000000000.0,
+    28500000000.0,
+    29000000000.0,
+    29500000000.0,
+    30000000000.0,
+    30500000000.0,
+    31000000000.0
+  ],
+  "frequency_labels": [
+    "19p0GHz",
+    "19p5GHz",
+    "20p0GHz",
+    "20p5GHz",
+    "21p0GHz",
+    "21p5GHz",
+    "22p0GHz",
+    "22p5GHz",
+    "23p0GHz",
+    "23p5GHz",
+    "24p0GHz",
+    "24p5GHz",
+    "25p0GHz",
+    "25p5GHz",
+    "26p0GHz",
+    "26p5GHz",
+    "27p0GHz",
+    "27p5GHz",
+    "28p0GHz",
+    "28p5GHz",
+    "29p0GHz",
+    "29p5GHz",
+    "30p0GHz",
+    "30p5GHz",
+    "31p0GHz"
+  ],
+  "collision_frequency_hz": 1000000000.0,
+  "receiver_config": {
+    "fs_hz": 500000.0,
+    "chip_rate_hz": 50000.0,
+    "coherent_integration_s": 0.001,
+    "code_length": 127,
+    "cn0_dbhz": 45.0,
+    "truth_free_runtime": true,
+    "nav_data_enabled": true,
+    "nav_bit_rate_bps": 50.0
+  },
+  "receiver_runs": [
+    {
+      "label": "19p0GHz",
+      "frequency_hz": 19000000000.0,
+      "tau_rmse_ns": 8986.464264091263,
+      "fd_rmse_hz": 3619.5792771485217,
+      "peak_to_second_db": 0.26941833532916326,
+      "loss_fraction": 0.1909804637575315,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/19p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "19p5GHz",
+      "frequency_hz": 19500000000.0,
+      "tau_rmse_ns": 9478.360403025852,
+      "fd_rmse_hz": 3662.7234984244087,
+      "peak_to_second_db": 0.08736000052884738,
+      "loss_fraction": 0.1821252510498448,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/19p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "20p0GHz",
+      "frequency_hz": 20000000000.0,
+      "tau_rmse_ns": 9870.317575344912,
+      "fd_rmse_hz": 3609.9087091086712,
+      "peak_to_second_db": 0.0975649928519358,
+      "loss_fraction": 0.17792587182764286,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/20p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "20p5GHz",
+      "frequency_hz": 20500000000.0,
+      "tau_rmse_ns": 9885.874319223349,
+      "fd_rmse_hz": 3456.7169830019006,
+      "peak_to_second_db": 0.0644103490238718,
+      "loss_fraction": 0.18162315136023371,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/20p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "21p0GHz",
+      "frequency_hz": 21000000000.0,
+      "tau_rmse_ns": 8644.393802366149,
+      "fd_rmse_hz": 3614.5564191856697,
+      "peak_to_second_db": 0.1552893883978638,
+      "loss_fraction": 0.17267664779989045,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/21p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "21p5GHz",
+      "frequency_hz": 21500000000.0,
+      "tau_rmse_ns": 8496.520196592852,
+      "fd_rmse_hz": 3253.531102529877,
+      "peak_to_second_db": 0.14515056636577625,
+      "loss_fraction": 0.17194632097863793,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/21p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "22p0GHz",
+      "frequency_hz": 22000000000.0,
+      "tau_rmse_ns": 8397.72730164403,
+      "fd_rmse_hz": 3200.8723153544106,
+      "peak_to_second_db": 0.289519026588981,
+      "loss_fraction": 0.16194997261274421,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/22p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "22p5GHz",
+      "frequency_hz": 22500000000.0,
+      "tau_rmse_ns": 8812.868070422825,
+      "fd_rmse_hz": 3209.141092097958,
+      "peak_to_second_db": 0.022534088267826907,
+      "loss_fraction": 0.16026109183859777,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/22p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "23p0GHz",
+      "frequency_hz": 23000000000.0,
+      "tau_rmse_ns": 8664.310315088054,
+      "fd_rmse_hz": 3080.40366344629,
+      "peak_to_second_db": 0.16226819178064208,
+      "loss_fraction": 0.15811575680116852,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/23p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "23p5GHz",
+      "frequency_hz": 23500000000.0,
+      "tau_rmse_ns": 32103.428497832832,
+      "fd_rmse_hz": 20905.440124660458,
+      "peak_to_second_db": 0.040250737152323225,
+      "loss_fraction": 0.5069837502282272,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/23p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "24p0GHz",
+      "frequency_hz": 24000000000.0,
+      "tau_rmse_ns": 7800.920733608593,
+      "fd_rmse_hz": 3002.6068595371994,
+      "peak_to_second_db": 0.09645689528856527,
+      "loss_fraction": 0.15670074858499178,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/24p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "24p5GHz",
+      "frequency_hz": 24500000000.0,
+      "tau_rmse_ns": 8493.202064837682,
+      "fd_rmse_hz": 3155.54626702921,
+      "peak_to_second_db": 0.022997948088423464,
+      "loss_fraction": 0.15423589556326456,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/24p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "25p0GHz",
+      "frequency_hz": 25000000000.0,
+      "tau_rmse_ns": 8757.080842837539,
+      "fd_rmse_hz": 3173.269546842606,
+      "peak_to_second_db": 0.20124614597778334,
+      "loss_fraction": 0.15610735804272413,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/25p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "25p5GHz",
+      "frequency_hz": 25500000000.0,
+      "tau_rmse_ns": 25456.582960708667,
+      "fd_rmse_hz": 20252.1253431937,
+      "peak_to_second_db": 0.21381776901226893,
+      "loss_fraction": 0.4772229322621873,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/25p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "26p0GHz",
+      "frequency_hz": 26000000000.0,
+      "tau_rmse_ns": 546.6927490111982,
+      "fd_rmse_hz": 133.92423548284685,
+      "peak_to_second_db": 0.03747813457359822,
+      "loss_fraction": 0.027706773781267117,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/26p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "26p5GHz",
+      "frequency_hz": 26500000000.0,
+      "tau_rmse_ns": 31329.194430373016,
+      "fd_rmse_hz": 21913.491947562237,
+      "peak_to_second_db": 0.15315502028081845,
+      "loss_fraction": 0.5145608909987219,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/26p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "27p0GHz",
+      "frequency_hz": 27000000000.0,
+      "tau_rmse_ns": 545.254355209964,
+      "fd_rmse_hz": 133.6333655642676,
+      "peak_to_second_db": 0.027105638314732047,
+      "loss_fraction": 0.023142231148438927,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/27p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "27p5GHz",
+      "frequency_hz": 27500000000.0,
+      "tau_rmse_ns": 29261.96984790885,
+      "fd_rmse_hz": 18794.11672859634,
+      "peak_to_second_db": 0.02427975353940391,
+      "loss_fraction": 0.45581522731422314,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/27p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "28p0GHz",
+      "frequency_hz": 28000000000.0,
+      "tau_rmse_ns": 540.579721323544,
+      "fd_rmse_hz": 132.32389297556037,
+      "peak_to_second_db": 0.20450523938157644,
+      "loss_fraction": 0.02318787657476721,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/28p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "28p5GHz",
+      "frequency_hz": 28500000000.0,
+      "tau_rmse_ns": 58960.92648277039,
+      "fd_rmse_hz": 20283.590319662035,
+      "peak_to_second_db": 0.12707726746058962,
+      "loss_fraction": 0.48566733613291946,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/28p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "29p0GHz",
+      "frequency_hz": 29000000000.0,
+      "tau_rmse_ns": 546.8090992385444,
+      "fd_rmse_hz": 132.74690436095602,
+      "peak_to_second_db": 0.19932794645752275,
+      "loss_fraction": 0.02186415921124703,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/29p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "29p5GHz",
+      "frequency_hz": 29500000000.0,
+      "tau_rmse_ns": 32831.96204959484,
+      "fd_rmse_hz": 19629.661636817913,
+      "peak_to_second_db": 0.012886631719990443,
+      "loss_fraction": 0.46786561986488956,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/29p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "30p0GHz",
+      "frequency_hz": 30000000000.0,
+      "tau_rmse_ns": 543.5023188838104,
+      "fd_rmse_hz": 133.5885380820035,
+      "peak_to_second_db": 0.1848376945881701,
+      "loss_fraction": 0.02177286835859047,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/30p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "30p5GHz",
+      "frequency_hz": 30500000000.0,
+      "tau_rmse_ns": 541.016365324701,
+      "fd_rmse_hz": 133.38061866486368,
+      "peak_to_second_db": 0.2347356914027619,
+      "loss_fraction": 0.02058608727405514,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/30p5GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "31p0GHz",
+      "frequency_hz": 31000000000.0,
+      "tau_rmse_ns": 33180.16027872376,
+      "fd_rmse_hz": 21258.793046750812,
+      "peak_to_second_db": 0.06722645453977155,
+      "loss_fraction": 0.5024192075953989,
+      "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra/31p0GHz_receiver_spectrum.png"
+    }
+  ],
+  "outputs": {
+    "results_dir": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel",
+    "summary_csv": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/frequency_summary.csv",
+    "overview_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/wkb_multifreq_overview.png",
+    "frequency_summary_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/wkb_multifreq_frequency_summary.png",
+    "spectrum_dir": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/receiver_spectra",
+    "frequency_detail_dir": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/single_channel/frequency_details",
+    "observables_dir": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_03_textbook_full_correction/corrected_fullstack/observables"
+  }
+}

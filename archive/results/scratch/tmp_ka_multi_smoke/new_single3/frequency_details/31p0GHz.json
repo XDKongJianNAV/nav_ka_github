@@ -1,0 +1,33 @@
+{
+  "label": "31p0GHz",
+  "frequency_hz": 31000000000.0,
+  "metrics": {
+    "tau_rmse_ns": 534.1803886423163,
+    "fd_rmse_hz": 94.74132718217358,
+    "peak_to_second_ratio": 1.030567702863432,
+    "peak_to_second_db": 0.130765279096674,
+    "loss_found": false,
+    "loss_fraction": 0.0052492240277524195,
+    "pll_integrator_clamped": 0,
+    "pll_freq_clamped": 0,
+    "tau_g_median_m": 0.14225104260130628,
+    "tau_g_span_m": 0.019916963865731437,
+    "pseudorange_mean_m": 116866.57460839691,
+    "doppler_mean_hz": 28281.881987836427,
+    "carrier_phase_mean_cycles": 381817.8587791691,
+    "post_corr_snr_median_db": 17.306355154587443,
+    "carrier_lock_metric_median": 0.9314362006330983
+  },
+  "wkb": {
+    "amplitude_median": 0.9545941456492688,
+    "attenuation_db_median": -0.4036247070085944,
+    "phase_rad_median": -89.54047947602507,
+    "group_delay_ns_median": 0.4744984031629851
+  },
+  "samples": {
+    "pseudorange": 21908,
+    "carrier_phase": 21908,
+    "doppler": 21908
+  },
+  "spectrum_png": "/home/guo/src/nav_ka_github/tmp_ka_multi_smoke/new_single3/receiver_spectra/31p0GHz_receiver_spectrum.png"
+}

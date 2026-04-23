@@ -8,3 +8,18 @@ wheels/
 
 # Virtual environments
 .venv
+
+# macOS / editor noise
+.DS_Store
+
+# Local caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Python bytecode inside repo-owned directories
+notebooks/__pycache__/
+notebooks/.ipynb_checkpoints/
+reports/__pycache__/
+src/__pycache__/
+tools/__pycache__/

@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>report_full.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="ka-225-ghz-%E7%9C%9F%E5%AE%9E-wkb-%E5%8D%95%E9%80%9A%E9%81%93%E8%83%8C%E6%99%AF%E8%80%A6%E5%90%88%E4%B8%8B%E7%9A%84%E5%A4%9A%E6%98%9F%E6%A0%87%E5%87%86%E4%BC%AA%E8%B7%9D%E4%B8%8E%E5%8D%95%E5%8E%86%E5%85%83-wls-pvt-%E5%AE%9E%E9%AA%8C%E5%AE%8C%E6%95%B4%E6%8A%A5%E5%91%8A">Ka 22.5 GHz 真实 WKB 单通道背景耦合下的多星标准伪距与单历元 WLS PVT 实验完整报告</h1>
+<h2 id="1-%E6%89%A7%E8%A1%8C%E6%91%98%E8%A6%81">1. 执行摘要</h2>
+<p>本次工作不是重新写一个导航层教学玩具，而是在已有单通道真实传播-接收机链路基础上，进一步补出多星标准伪距观测与单历元位置/钟差解算层。原有项目已经实现了真实电子密度场、真实 WKB 传播、PN/BPSK 信号、捕获、DLL / PLL 跟踪，并能输出单通道 <code>pseudorange / carrier phase / Doppler</code>。本次新增脚本 <a href="../notebooks/exp_multisat_wls_pvt_report.py">../notebooks/exp_multisat_wls_pvt_report.py</a> 的核心，是把系统从“单链路实验台”推进到“多星标准观测 + LS/WLS PVT”这一层。</p>
+<p>本次结果的关键结论有三点。第一，新脚本已经真实复用了旧脚本中的 WKB 与单通道接收机链路，而不是只借用了常量。第二，在这个真实单通道背景耦合下，多星解算结果不再过于理想，量级回到了更可信的区间。第三，在低仰角大误差场景下，WLS 相比普通 LS 具有明显改进。</p>
+<p>本次最关键的数值如下：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align:right">数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真实 <code>tau_g</code> 中位数</td>
+<td style="text-align:right">0.1446 m</td>
+</tr>
+<tr>
+<td>单通道伪距误差 <code>1 s</code> 平滑 sigma</td>
+<td style="text-align:right">63.394 m</td>
+</tr>
+<tr>
+<td>实验 A LS 3D 误差</td>
+<td style="text-align:right">19.281 m</td>
+</tr>
+<tr>
+<td>实验 A WLS 3D 误差</td>
+<td style="text-align:right">16.792 m</td>
+</tr>
+<tr>
+<td>实验 B LS 3D 误差</td>
+<td style="text-align:right">363.227 m</td>
+</tr>
+<tr>
+<td>实验 B WLS 3D 误差</td>
+<td style="text-align:right">101.270 m</td>
+</tr>
+<tr>
+<td>Monte Carlo LS 均值 / p90</td>
+<td style="text-align:right">183.398 m / 356.426 m</td>
+</tr>
+<tr>
+<td>Monte Carlo WLS 均值 / p90</td>
+<td style="text-align:right">125.992 m / 223.767 m</td>
+</tr>
+</tbody>
+</table>
+<p>需要强调的是：本报告给出的结果代表的是<strong>真实单通道 Ka/WKB 背景耦合下的 hybrid 多星标准伪距 / WLS 实验</strong>，不等于“真实多星端到端 Ka 导航系统性能定标”。所有这一层面的简化与边界，都在第 13 节明确写出。</p>
+<h2 id="2-%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF%E4%B8%8E%E5%8E%9F%E6%9C%89%E5%B7%A5%E4%BD%9C">2. 项目背景与原有工作</h2>
+<p>原有主脚本 <a href="../notebooks/nb_ka225_rx_from_real_wkb_debug.py">../notebooks/nb_ka225_rx_from_real_wkb_debug.py</a> 已经完成了一个相当完整的单通道链路实验。它的主链条是：</p>
+<ol>
+<li>从 CSV 构造真实电子密度场。</li>
+<li>进行真实 WKB 传播计算，得到 <code>A(t)</code>、<code>phi(t)</code>、<code>tau_g(t)</code>。</li>
+<li>基于这些真实传播量构造 Ka 22.5 GHz PN/BPSK 信号。</li>
+<li>完成捕获。</li>
+<li>完成 DLL / PLL 跟踪。</li>
+<li>输出单通道 <code>pseudorange / carrier phase / Doppler</code> 序列。</li>
+</ol>
+<p>从系统工程角度看，这一步非常重要，因为它证明了以下链路已经打通：</p>
+<ul>
+<li>真实场模型</li>
+<li>真实传播</li>
+<li>单通道信号体制</li>
+<li>接收机捕获与跟踪</li>
+<li>单通道观测量恢复</li>
+</ul>
+<p>但它依然更偏“单链路实验台”，而不是“导航解算层”。原因很直接：单通道链路即使输出了 <code>pseudorange</code>，也还没有进入多星几何、多星标准伪距方程、位置/钟差联合求解和 DOP / WLS 这一层。</p>
+<p>因此，本次工作的目标不是推翻原有工作，而是在其基础上补齐更高层级的导航系统实验结果。</p>
+<h2 id="3-%E6%9C%AC%E6%AC%A1%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%9B%AE%E6%A0%87%E4%B8%8E%E5%AE%9A%E4%BD%8D">3. 本次工作的目标与定位</h2>
+<p>本次新增脚本 <a href="../notebooks/exp_multisat_wls_pvt_report.py">../notebooks/exp_multisat_wls_pvt_report.py</a> 的定位非常明确：</p>
+<ul>
+<li>不是替代旧脚本。</li>
+<li>不是把旧脚本的真实链路降级成手工简化模型。</li>
+<li>而是在旧脚本基础上，新增多星标准伪距形成与单历元位置/钟差解算。</li>
+</ul>
+<p>这一步对应的系统跃迁是：</p>
+<pre class="hljs"><code><div>原有层级:
+真实电子密度场
+  -&gt; 真实 WKB 传播
+  -&gt; 单通道 PN/BPSK 接收机
+  -&gt; 单通道 pseudorange / carrier phase / Doppler
+
+本次新增层级:
+单通道真实背景
+  -&gt; 多星几何场景
+  -&gt; 标准伪距方程
+  -&gt; LS / WLS 单历元 PVT
+  -&gt; ENU / 3D error / residual / DOP / Monte Carlo
+</div></code></pre>
+<p>因此，本次结果的系统意义不是“再做一次单通道图”，而是第一次让项目进入多星标准观测和导航解算层。</p>
+<h2 id="4-%E8%BF%99%E6%AC%A1%E5%88%B0%E5%BA%95%E7%9C%9F%E5%AE%9E%E5%A4%8D%E7%94%A8%E4%BA%86%E6%97%A7%E6%96%87%E4%BB%B6%E5%93%AA%E4%BA%9B%E9%83%A8%E5%88%86">4. 这次到底真实复用了旧文件哪些部分</h2>
+<p>本次真正复用的旧脚本组件如下：</p>
+<ol>
+<li><code>build_fields_from_csv</code></li>
+<li><code>compute_real_wkb_series</code></li>
+<li><code>build_signal_config_from_wkb_time</code></li>
+<li><code>resample_wkb_to_receiver_time</code></li>
+<li><code>KaBpskReceiver.run</code></li>
+</ol>
+<p>这意味着本次报告中的真实传播背景和单通道接收机背景，不是新脚本重新手写伪造出来的，而是直接通过旧脚本的真实链路生成。</p>
+<p>下面这个代码块就是真实复用旧链路的核心调用链：</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># notebooks/exp_multisat_wls_pvt_report.py</span>
+field_result = LEGACY_DEBUG.build_fields_from_csv(...)
+wkb_result = LEGACY_DEBUG.compute_real_wkb_series(...)
+cfg_sig = LEGACY_DEBUG.build_signal_config_from_wkb_time(...)
+plasma_rx = LEGACY_DEBUG.resample_wkb_to_receiver_time(...)
+receiver_context = LEGACY_DEBUG.ReceiverRuntimeContext(...)
+receiver_outputs = LEGACY_DEBUG.KaBpskReceiver(receiver_context).run()
+trk_result = receiver_outputs.trk_result
+</div></code></pre>
+<p>这段代码说明，新脚本并不是只拿了 <code>C_LIGHT</code>，而是把旧脚本最核心的真实传播与单通道接收机处理链真正接进来了。</p>
+<h2 id="5-%E6%9C%AC%E6%AC%A1%E6%96%B0%E5%A2%9E%E8%84%9A%E6%9C%AC%E7%9A%84%E6%80%BB%E4%BD%93%E6%B5%81%E7%A8%8B">5. 本次新增脚本的总体流程</h2>
+<p>从代码层面看，新脚本当前的流程可以用下面这个文本流程图概括：</p>
+<pre class="hljs"><code><div>真实电子密度场 CSV
+  -&gt; 旧脚本 build_fields_from_csv
+  -&gt; 旧脚本 compute_real_wkb_series
+  -&gt; 旧脚本 build_signal_config_from_wkb_time
+  -&gt; 旧脚本 resample_wkb_to_receiver_time
+  -&gt; 旧脚本 KaBpskReceiver.run
+  -&gt; 得到真实单通道背景:
+       A(t), phi(t), tau_g(t), pseudorange, SNR, tracking error
+  -&gt; 新脚本构造多星几何场景
+  -&gt; 新脚本形成标准伪距观测
+  -&gt; 新脚本执行 LS / WLS 单历元 PVT
+  -&gt; 新脚本执行 Monte Carlo
+  -&gt; 输出图片 / CSV / JSON / Markdown
+</div></code></pre>
+<p>这个流程里有三类量必须严格区分：</p>
+<ol>
+<li>
+<p><strong>单通道链路量</strong><br>
+例如 <code>A(t)</code>、<code>phi(t)</code>、<code>tau_g(t)</code>、单通道 <code>pseudorange</code>、单通道 tracking error。</p>
+</li>
+<li>
+<p><strong>标准伪距观测</strong><br>
+即进入统一观测方程的多星 <code>pseudorange_m</code>。</p>
+</li>
+<li>
+<p><strong>多星导航解算结果</strong><br>
+即 LS/WLS 的位置、钟差、残差、DOP、ENU 误差、3D 误差、Monte Carlo 统计。</p>
+</li>
+</ol>
+<h2 id="6-%E6%A0%87%E5%87%86%E4%BC%AA%E8%B7%9D%E8%A7%82%E6%B5%8B%E6%96%B9%E7%A8%8B">6. 标准伪距观测方程</h2>
+<p>本次在导航层显式使用的标准伪距方程为：</p>
+<pre class="hljs"><code><div>pseudorange_m =
+    geometric_range_m
+    + c * (receiver_clock_bias_s - satellite_clock_bias_s)
+    + tropo_delay_m
+    + dispersive_delay_m
+    + hardware_bias_m
+    + noise_m
+</div></code></pre>
+<p>各项物理意义如下：</p>
+<ul>
+<li><code>geometric_range_m</code>：卫星与接收机之间的几何距离。</li>
+<li><code>receiver_clock_bias_s</code>：接收机钟差。</li>
+<li><code>satellite_clock_bias_s</code>：卫星钟差。</li>
+<li><code>tropo_delay_m</code>：对流层延迟，当前采用参数化模型。</li>
+<li><code>dispersive_delay_m</code>：类电离层 / 类等离子体传播项，这里优先挂接旧脚本真实 <code>tau_g</code> 的量级与背景。</li>
+<li><code>hardware_bias_m</code>：硬件偏差，当前采用参数化模型。</li>
+<li><code>noise_m</code>：测量噪声，当前用旧脚本单通道观测误差统计来定标。</li>
+</ul>
+<p>必须强调：单通道 DLL 输出的 <code>c * tau_est</code> 是链路内部恢复的码时延量，它不是自动等同于导航层标准伪距。标准伪距必须进入几何、钟差、传播误差统一观测方程后，才能用于多星导航解算。</p>
+<p>标准伪距形成的关键实现逻辑如下：</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># notebooks/exp_multisat_wls_pvt_report.py</span>
+pseudorange_m = (
+    geometric_range_m
+    + receiver_cfg.receiver_clock_bias_m
+    - C_LIGHT * sat.sat_clock_bias_s
+    + tropo_delay_m
+    + dispersive_delay_m
+    + hardware_bias_m
+    + noise_m
+)
+</div></code></pre>
+<h2 id="7-%E5%A4%9A%E6%98%9F%E5%87%A0%E4%BD%95%E5%9C%BA%E6%99%AF">7. 多星几何场景</h2>
+<p>本次接收机真值固定为：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:right">数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Latitude</td>
+<td style="text-align:right">34.0 deg</td>
+</tr>
+<tr>
+<td>Longitude</td>
+<td style="text-align:right">108.0 deg</td>
+</tr>
+<tr>
+<td>Height</td>
+<td style="text-align:right">500 m</td>
+</tr>
+<tr>
+<td>Receiver clock bias</td>
+<td style="text-align:right">120 m</td>
+</tr>
+<tr>
+<td>Carrier frequency</td>
+<td style="text-align:right">22.5 GHz</td>
+</tr>
+</tbody>
+</table>
+<p>多星场景设计原则是：</p>
+<ul>
+<li>至少 8 颗卫星</li>
+<li>同时包含高仰角和低仰角</li>
+<li>故意构造不完全理想场景</li>
+<li>让低仰角观测更差，以便比较 LS 与 WLS</li>
+</ul>
+<h3 id="71-%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E5%9B%BE">7.1 三维几何图</h3>
+<p><img src="file:///home/guo/src/nav_ka_github/results_multisat_wls/geometry_3d.png" alt=""></p>
+<p>图 1 给出了接收机和卫星在 ECEF 三维坐标系下的几何分布。它的作用不是展示“真实星历”，而是证明多星解算所依赖的几何关系是自洽的：接收机位置固定，卫星位置由方位角、仰角与轨道半径约束反推出 ECEF 坐标。图中每一条连线对应一条视线方向，这些视线共同决定设计矩阵 <code>H</code> 的几何结构。</p>
+<h3 id="72-%E5%A4%A9%E7%A9%BA%E5%9B%BE">7.2 天空图</h3>
+<p><img src="file:///home/guo/src/nav_ka_github/results_multisat_wls/sky_geometry.png" alt=""></p>
+<p>图 2 展示了天空图上的卫星分布。径向距离对应 <code>90° - elevation</code>，越靠近中心表示仰角越高。图中颜色代表观测 sigma，低仰角卫星的 sigma 更大。<br>
+从图上可以直接看出，Case A 的几何相对均匀，Case B 则刻意引入了多个低仰角差观测，用来放大普通 LS 对差观测的敏感性。</p>
+<h3 id="73-%E5%8D%AB%E6%98%9F%E5%87%A0%E4%BD%95%E4%B8%8E%E8%A7%82%E6%B5%8B%E5%AE%9A%E6%A0%87%E8%A1%A8">7.3 卫星几何与观测定标表</h3>
+<h4 id="case-a">Case A</h4>
+<table>
+<thead>
+<tr>
+<th>Sat</th>
+<th style="text-align:right">Az (deg)</th>
+<th style="text-align:right">El (deg)</th>
+<th style="text-align:right">Sigma (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G01</td>
+<td style="text-align:right">12.0</td>
+<td style="text-align:right">74.0</td>
+<td style="text-align:right">29.33</td>
+</tr>
+<tr>
+<td>G02</td>
+<td style="text-align:right">58.0</td>
+<td style="text-align:right">66.0</td>
+<td style="text-align:right">30.39</td>
+</tr>
+<tr>
+<td>G03</td>
+<td style="text-align:right">103.0</td>
+<td style="text-align:right">58.0</td>
+<td style="text-align:right">32.02</td>
+</tr>
+<tr>
+<td>G04</td>
+<td style="text-align:right">148.0</td>
+<td style="text-align:right">50.0</td>
+<td style="text-align:right">34.38</td>
+</tr>
+<tr>
+<td>G05</td>
+<td style="text-align:right">202.0</td>
+<td style="text-align:right">44.0</td>
+<td style="text-align:right">36.81</td>
+</tr>
+<tr>
+<td>G06</td>
+<td style="text-align:right">248.0</td>
+<td style="text-align:right">37.0</td>
+<td style="text-align:right">40.70</td>
+</tr>
+<tr>
+<td>G07</td>
+<td style="text-align:right">302.0</td>
+<td style="text-align:right">31.0</td>
+<td style="text-align:right">45.39</td>
+</tr>
+<tr>
+<td>G08</td>
+<td style="text-align:right">340.0</td>
+<td style="text-align:right">27.0</td>
+<td style="text-align:right">49.58</td>
+</tr>
+</tbody>
+</table>
+<h4 id="case-b">Case B</h4>
+<table>
+<thead>
+<tr>
+<th>Sat</th>
+<th style="text-align:right">Az (deg)</th>
+<th style="text-align:right">El (deg)</th>
+<th style="text-align:right">Sigma (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G01</td>
+<td style="text-align:right">18.0</td>
+<td style="text-align:right">75.0</td>
+<td style="text-align:right">35.72</td>
+</tr>
+<tr>
+<td>G02</td>
+<td style="text-align:right">63.0</td>
+<td style="text-align:right">60.0</td>
+<td style="text-align:right">38.56</td>
+</tr>
+<tr>
+<td>G03</td>
+<td style="text-align:right">110.0</td>
+<td style="text-align:right">46.0</td>
+<td style="text-align:right">43.91</td>
+</tr>
+<tr>
+<td>G04</td>
+<td style="text-align:right">155.0</td>
+<td style="text-align:right">31.0</td>
+<td style="text-align:right">55.48</td>
+</tr>
+<tr>
+<td>G05</td>
+<td style="text-align:right">212.0</td>
+<td style="text-align:right">19.0</td>
+<td style="text-align:right">76.48</td>
+</tr>
+<tr>
+<td>G06</td>
+<td style="text-align:right">258.0</td>
+<td style="text-align:right">13.0</td>
+<td style="text-align:right">110.91</td>
+</tr>
+<tr>
+<td>G07</td>
+<td style="text-align:right">306.0</td>
+<td style="text-align:right">9.0</td>
+<td style="text-align:right">163.26</td>
+</tr>
+<tr>
+<td>G08</td>
+<td style="text-align:right">346.0</td>
+<td style="text-align:right">7.0</td>
+<td style="text-align:right">199.49</td>
+</tr>
+</tbody>
+</table>
+<p>这两张表已经可以直观看出 Case B 的低仰角卫星被显著降权，这是 WLS 能够改善解算结果的基础。</p>
+<h2 id="8-%E6%97%A7%E6%96%87%E4%BB%B6%E7%9C%9F%E5%AE%9E%E5%8D%95%E9%80%9A%E9%81%93%E8%83%8C%E6%99%AF">8. 旧文件真实单通道背景</h2>
+<p>这是本报告最关键的“原始证据”部分，因为它回答了“你到底有没有用旧文件真实链路”这个问题。</p>
+<p><img src="file:///home/guo/src/nav_ka_github/results_multisat_wls/legacy_channel_overview.png" alt=""></p>
+<p>图 3 一共包含六个子图，分别展示：</p>
+<ol>
+<li><code>Legacy WKB amplitude</code>：真实 WKB 幅度衰减。</li>
+<li><code>Legacy WKB phase</code>：真实 WKB 相位变化。</li>
+<li><code>Legacy group delay</code>：真实群时延 <code>tau_g(t)</code>。</li>
+<li><code>Legacy single-channel pseudorange error</code>：单通道伪距估计与 truth 的偏差。</li>
+<li><code>Legacy post-correlation SNR</code>：后相关 SNR。</li>
+<li><code>Legacy single-channel pseudorange</code>：单通道伪距估计与 truth 序列对比。</li>
+</ol>
+<p>这些图说明：</p>
+<ul>
+<li>真实 WKB 链路已经接入，新脚本不是在凭空造一个色散项。</li>
+<li><code>tau_g</code> 的物理量级在当前场景下是存在的，但不是一个非常巨大的量。</li>
+<li>单通道接收机恢复的码伪距并不“天然很准”，它本身存在明显的 tracking 误差与低频漂移。</li>
+</ul>
+<p>从 <code>summary.json</code> 统计得到的旧链路关键量级如下：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align:right">数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tau_g</code> 中位数</td>
+<td style="text-align:right">0.1446 m</td>
+</tr>
+<tr>
+<td><code>tau_g</code> 跨度</td>
+<td style="text-align:right">0.0358 m</td>
+</tr>
+<tr>
+<td>单通道伪距误差 <code>100 ms</code> 平滑 sigma</td>
+<td style="text-align:right">165.353 m</td>
+</tr>
+<tr>
+<td>单通道伪距误差 <code>1 s</code> 平滑 sigma</td>
+<td style="text-align:right">63.394 m</td>
+</tr>
+<tr>
+<td>单通道伪距误差 <code>1 s</code> 平滑 RMSE</td>
+<td style="text-align:right">67.510 m</td>
+</tr>
+<tr>
+<td>单通道伪距误差平均偏置</td>
+<td style="text-align:right">-25.391 m</td>
+</tr>
+</tbody>
+</table>
+<p>这组数据非常重要。它说明在当前 Ka/WKB 背景下，传播色散项确实存在，但单通道码跟踪误差的量级并不小。因此，如果多星导航层最后报出过于理想的个位数米结果，就必须高度警惕，因为那很可能意味着导航层把单通道观测误差的真实量级“洗掉了”。</p>
+<p>下面这段代码是旧链路真实背景提取的核心：</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># notebooks/exp_multisat_wls_pvt_report.py</span>
+wkb_result = LEGACY_DEBUG.compute_real_wkb_series(...)
+cfg_sig = LEGACY_DEBUG.build_signal_config_from_wkb_time(...)
+plasma_rx = LEGACY_DEBUG.resample_wkb_to_receiver_time(...)
+receiver_outputs = LEGACY_DEBUG.KaBpskReceiver(receiver_context).run()
+trk_result = receiver_outputs.trk_result
+
+pseudorange_error_m = trk_result[<span class="hljs-string">"pseudorange_m"</span>] - C_LIGHT * trk_result[<span class="hljs-string">"tau_true_s"</span>]
+effective_sigma_100ms_m = block_average_sigma(pseudorange_error_m, <span class="hljs-number">100</span>)
+effective_sigma_1s_m = block_average_sigma(pseudorange_error_m, <span class="hljs-number">1000</span>)
+</div></code></pre>
+<h2 id="9-%E4%BB%8E%E5%8D%95%E9%80%9A%E9%81%93%E8%83%8C%E6%99%AF%E5%88%B0%E5%A4%9A%E6%98%9F%E6%A0%87%E5%87%86%E4%BC%AA%E8%B7%9D">9. 从单通道背景到多星标准伪距</h2>
+<p>新脚本最关键的“桥接层”就是：如何从真实单通道背景构造多星标准伪距。</p>
+<p>当前实现方式是：</p>
+<ol>
+<li>多星几何由自洽的方位角/仰角场景生成。</li>
+<li><code>dispersive_delay_m</code> 用旧链路真实 <code>tau_g</code> 的量级作为基底，再按仰角映射。</li>
+<li><code>sigma_m</code> 不再凭空手写，而是从旧脚本单通道伪距误差 <code>1 s</code> 平滑 sigma 映射得到。</li>
+<li>低仰角卫星会进一步放大 sigma 与非几何误差项。</li>
+</ol>
+<p>这段逻辑对应的实现如下：</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># notebooks/exp_multisat_wls_pvt_report.py</span>
+sigma_m = legacy_bg.effective_pseudorange_sigma_1s_m * config.sigma_scale_factor / (sin_el ** <span class="hljs-number">0.70</span>)
+dispersive_delay_m = legacy_bg.tau_g_median_m * config.dispersive_scale_factor / (sin_el ** <span class="hljs-number">1.25</span>)
+
+pseudorange_m = (
+    geometric_range_m
+    + receiver_cfg.receiver_clock_bias_m
+    - C_LIGHT * sat.sat_clock_bias_s
+    + tropo_delay_m
+    + dispersive_delay_m
+    + hardware_bias_m
+    + noise_m
+)
+</div></code></pre>
+<h3 id="91-%E6%A0%87%E5%87%86%E4%BC%AA%E8%B7%9D%E7%BB%84%E6%88%90%E5%9B%BE">9.1 标准伪距组成图</h3>
+<p><img src="file:///home/guo/src/nav_ka_github/results_multisat_wls/pseudorange_formation.png" alt=""></p>
+<p>图 4 展示了多星标准伪距中非几何项的组成，包括：</p>
+<ul>
+<li>对流层项</li>
+<li>基于旧链路真实 <code>tau_g</code> 映射的色散项</li>
+<li>硬件偏差</li>
+<li>噪声</li>
+<li>每颗星的观测 sigma</li>
+</ul>
+<p>从图里可以看出，Case A 的各星非几何项和 sigma 变化相对平缓，而 Case B 在低仰角星上显著增大，特别是 G06、G07、G08。这正是 WLS 有发挥空间的原因。</p>
+<h3 id="92-%E9%80%90%E6%98%9F%E8%A7%82%E6%B5%8B%E4%BE%8B%E5%AD%90">9.2 逐星观测例子</h3>
+<h4 id="case-a-%E9%80%90%E6%98%9F%E8%A7%82%E6%B5%8B%E6%91%98%E8%A6%81">Case A 逐星观测摘要</h4>
+<table>
+<thead>
+<tr>
+<th>Sat</th>
+<th style="text-align:right">El (deg)</th>
+<th style="text-align:right">Tropo (m)</th>
+<th style="text-align:right">Dispersive (m)</th>
+<th style="text-align:right">Hardware (m)</th>
+<th style="text-align:right">Noise (m)</th>
+<th style="text-align:right">Sigma (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G01</td>
+<td style="text-align:right">74</td>
+<td style="text-align:right">2.392</td>
+<td style="text-align:right">0.152</td>
+<td style="text-align:right">0.800</td>
+<td style="text-align:right">5.279</td>
+<td style="text-align:right">29.327</td>
+</tr>
+<tr>
+<td>G02</td>
+<td style="text-align:right">66</td>
+<td style="text-align:right">2.517</td>
+<td style="text-align:right">0.162</td>
+<td style="text-align:right">-0.600</td>
+<td style="text-align:right">-4.559</td>
+<td style="text-align:right">30.391</td>
+</tr>
+<tr>
+<td>G03</td>
+<td style="text-align:right">58</td>
+<td style="text-align:right">2.711</td>
+<td style="text-align:right">0.178</td>
+<td style="text-align:right">1.100</td>
+<td style="text-align:right">7.044</td>
+<td style="text-align:right">32.016</td>
+</tr>
+<tr>
+<td>G04</td>
+<td style="text-align:right">50</td>
+<td style="text-align:right">3.000</td>
+<td style="text-align:right">0.202</td>
+<td style="text-align:right">-0.900</td>
+<td style="text-align:right">-6.188</td>
+<td style="text-align:right">34.378</td>
+</tr>
+<tr>
+<td>G05</td>
+<td style="text-align:right">44</td>
+<td style="text-align:right">3.307</td>
+<td style="text-align:right">0.228</td>
+<td style="text-align:right">0.400</td>
+<td style="text-align:right">8.836</td>
+<td style="text-align:right">36.815</td>
+</tr>
+<tr>
+<td>G06</td>
+<td style="text-align:right">37</td>
+<td style="text-align:right">3.815</td>
+<td style="text-align:right">0.273</td>
+<td style="text-align:right">-0.700</td>
+<td style="text-align:right">-6.513</td>
+<td style="text-align:right">40.704</td>
+</tr>
+<tr>
+<td>G07</td>
+<td style="text-align:right">31</td>
+<td style="text-align:right">4.453</td>
+<td style="text-align:right">0.331</td>
+<td style="text-align:right">1.600</td>
+<td style="text-align:right">9.078</td>
+<td style="text-align:right">45.391</td>
+</tr>
+<tr>
+<td>G08</td>
+<td style="text-align:right">27</td>
+<td style="text-align:right">5.047</td>
+<td style="text-align:right">0.388</td>
+<td style="text-align:right">-1.300</td>
+<td style="text-align:right">-6.942</td>
+<td style="text-align:right">49.583</td>
+</tr>
+</tbody>
+</table>
+<h4 id="case-b-%E9%80%90%E6%98%9F%E8%A7%82%E6%B5%8B%E6%91%98%E8%A6%81">Case B 逐星观测摘要</h4>
+<table>
+<thead>
+<tr>
+<th>Sat</th>
+<th style="text-align:right">El (deg)</th>
+<th style="text-align:right">Tropo (m)</th>
+<th style="text-align:right">Dispersive (m)</th>
+<th style="text-align:right">Hardware (m)</th>
+<th style="text-align:right">Noise (m)</th>
+<th style="text-align:right">Sigma (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G01</td>
+<td style="text-align:right">75</td>
+<td style="text-align:right">2.692</td>
+<td style="text-align:right">0.211</td>
+<td style="text-align:right">1.040</td>
+<td style="text-align:right">4.287</td>
+<td style="text-align:right">35.723</td>
+</tr>
+<tr>
+<td>G02</td>
+<td style="text-align:right">60</td>
+<td style="text-align:right">3.001</td>
+<td style="text-align:right">0.242</td>
+<td style="text-align:right">-0.780</td>
+<td style="text-align:right">-7.712</td>
+<td style="text-align:right">38.560</td>
+</tr>
+<tr>
+<td>G03</td>
+<td style="text-align:right">46</td>
+<td style="text-align:right">3.611</td>
+<td style="text-align:right">0.306</td>
+<td style="text-align:right">1.430</td>
+<td style="text-align:right">15.368</td>
+<td style="text-align:right">43.909</td>
+</tr>
+<tr>
+<td>G04</td>
+<td style="text-align:right">31</td>
+<td style="text-align:right">5.034</td>
+<td style="text-align:right">0.464</td>
+<td style="text-align:right">-1.170</td>
+<td style="text-align:right">-33.287</td>
+<td style="text-align:right">55.478</td>
+</tr>
+<tr>
+<td>G05</td>
+<td style="text-align:right">19</td>
+<td style="text-align:right">7.920</td>
+<td style="text-align:right">0.823</td>
+<td style="text-align:right">0.520</td>
+<td style="text-align:right">72.658</td>
+<td style="text-align:right">76.483</td>
+</tr>
+<tr>
+<td>G06</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">11.347</td>
+<td style="text-align:right">1.307</td>
+<td style="text-align:right">-0.910</td>
+<td style="text-align:right">127.541</td>
+<td style="text-align:right">110.905</td>
+</tr>
+<tr>
+<td>G07</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">15.996</td>
+<td style="text-align:right">2.058</td>
+<td style="text-align:right">2.080</td>
+<td style="text-align:right">-261.210</td>
+<td style="text-align:right">163.256</td>
+</tr>
+<tr>
+<td>G08</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">20.048</td>
+<td style="text-align:right">2.812</td>
+<td style="text-align:right">-1.690</td>
+<td style="text-align:right">438.876</td>
+<td style="text-align:right">199.489</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-ls-%E4%B8%8E-wls-%E5%8D%95%E5%8E%86%E5%85%83%E8%A7%A3%E7%AE%97%E6%96%B9%E6%B3%95">10. LS 与 WLS 单历元解算方法</h2>
+<p>本次单历元 PVT 的状态量定义为：</p>
+<pre class="hljs"><code><div>[x_m, y_m, z_m, receiver_clock_bias_m]
+</div></code></pre>
+<p>求解方法是迭代线性化。设计矩阵 <code>H</code> 的每一行来自对应卫星的 LOS 单位向量：</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># notebooks/exp_multisat_wls_pvt_report.py</span>
+line_of_sight_m = obs.sat_pos_ecef_m - state_m[:<span class="hljs-number">3</span>]
+geometric_range_m = float(np.linalg.norm(line_of_sight_m))
+los_unit = line_of_sight_m / geometric_range_m
+
+h_rows.append([-los_unit[<span class="hljs-number">0</span>], -los_unit[<span class="hljs-number">1</span>], -los_unit[<span class="hljs-number">2</span>], <span class="hljs-number">1.0</span>])
+residual_vector_m.append(obs.pseudorange_m - predicted_pseudorange_m)
+</div></code></pre>
+<p>LS 与 WLS 的区别只体现在权阵：</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">if</span> weighted:
+    weight_matrix = np.diag(<span class="hljs-number">1.0</span> / np.maximum(sigma_m, <span class="hljs-number">1e-6</span>) ** <span class="hljs-number">2</span>)
+    normal_matrix = h_matrix.T @ weight_matrix @ h_matrix
+    rhs_vector = h_matrix.T @ weight_matrix @ residual_vector_m
+<span class="hljs-keyword">else</span>:
+    normal_matrix = h_matrix.T @ h_matrix
+    rhs_vector = h_matrix.T @ residual_vector_m
+</div></code></pre>
+<p>这意味着：</p>
+<ul>
+<li>LS 对所有观测一视同仁。</li>
+<li>WLS 会根据 <code>sigma_m</code> 自动降低低质量观测的影响。</li>
+<li>当低仰角卫星误差显著放大时，WLS 理论上应比 LS 更稳健。</li>
+</ul>
+<h2 id="11-%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1">11. 实验设计</h2>
+<h3 id="111-%E5%AE%9E%E9%AA%8C-a">11.1 实验 A</h3>
+<ul>
+<li>目标：验证系统在较好几何和中等噪声下可正常工作。</li>
+<li>场景：8 星，仰角整体较高。</li>
+<li>预期：LS 和 WLS 都应收敛，WLS 小幅优于 LS。</li>
+</ul>
+<h3 id="112-%E5%AE%9E%E9%AA%8C-b">11.2 实验 B</h3>
+<ul>
+<li>目标：通过低仰角差观测放大 LS 的劣势，突出 WLS 的价值。</li>
+<li>场景：保留 8 星，但引入多个低仰角观测。</li>
+<li>预期：LS 明显变差，WLS 有显著改善。</li>
+</ul>
+<h3 id="113-%E5%AE%9E%E9%AA%8C-c">11.3 实验 C</h3>
+<ul>
+<li>目标：不只看单次 realization，而是看统计结果。</li>
+<li>场景：基于实验 B 进行 120 次 Monte Carlo。</li>
+<li>输出：LS/WLS 的 3D 误差分布、均值、标准差和 90% 分位数。</li>
+</ul>
+<h2 id="12-%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C">12. 实验结果</h2>
+<h3 id="121-dop-%E6%8C%87%E6%A0%87">12.1 DOP 指标</h3>
+<p><img src="file:///home/guo/src/nav_ka_github/results_multisat_wls/dop_summary.png" alt=""></p>
+<p>图 5 展示了 Case A 与 Case B 的 DOP 指标。虽然 Case B 的 PDOP 并不差，但它仍然在解算上更困难，原因不是几何本身特别坏，而是低仰角观测质量明显更差。这一点说明：几何好并不自动等于解算结果好，观测质量模型同样关键。</p>
+<h3 id="122-%E5%8D%95%E6%AC%A1%E8%A7%A3%E7%AE%97%E7%BB%93%E6%9E%9C%E6%80%BB%E8%A1%A8">12.2 单次解算结果总表</h3>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Metric</th>
+<th style="text-align:right">LS</th>
+<th style="text-align:right">WLS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>3D position error (m)</td>
+<td style="text-align:right">19.281</td>
+<td style="text-align:right">16.792</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Clock bias (m)</td>
+<td style="text-align:right">107.029</td>
+<td style="text-align:right">108.826</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Residual RMS / weighted RMS</td>
+<td style="text-align:right">6.574</td>
+<td style="text-align:right">0.177</td>
+</tr>
+<tr>
+<td>B</td>
+<td>3D position error (m)</td>
+<td style="text-align:right">363.227</td>
+<td style="text-align:right">101.270</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Clock bias (m)</td>
+<td style="text-align:right">340.639</td>
+<td style="text-align:right">203.528</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Residual RMS / weighted RMS</td>
+<td style="text-align:right">164.850</td>
+<td style="text-align:right">1.053</td>
+</tr>
+</tbody>
+</table>
+<p>从这个表格可以看出：</p>
+<ul>
+<li>在较好几何和中等噪声下，LS 与 WLS 都能工作，但 WLS 更优。</li>
+<li>在低仰角大误差场景下，LS 会被差观测显著拖差，而 WLS 改善非常明显。</li>
+</ul>
+<h3 id="123-enu-%E8%AF%AF%E5%B7%AE%E4%B8%8E%E4%BD%8D%E7%BD%AE%E8%AF%AF%E5%B7%AE">12.3 ENU 误差与位置误差</h3>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Method</th>
+<th style="text-align:right">East (m)</th>
+<th style="text-align:right">North (m)</th>
+<th style="text-align:right">Up (m)</th>
+<th style="text-align:right">3D (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>LS</td>
+<td style="text-align:right">6.153</td>
+<td style="text-align:right">0.633</td>
+<td style="text-align:right">-18.262</td>
+<td style="text-align:right">19.281</td>
+</tr>
+<tr>
+<td>A</td>
+<td>WLS</td>
+<td style="text-align:right">5.270</td>
+<td style="text-align:right">1.034</td>
+<td style="text-align:right">-15.910</td>
+<td style="text-align:right">16.792</td>
+</tr>
+<tr>
+<td>B</td>
+<td>LS</td>
+<td style="text-align:right">-141.996</td>
+<td style="text-align:right">-70.250</td>
+<td style="text-align:right">326.858</td>
+<td style="text-align:right">363.227</td>
+</tr>
+<tr>
+<td>B</td>
+<td>WLS</td>
+<td style="text-align:right">15.692</td>
+<td style="text-align:right">-34.039</td>
+<td style="text-align:right">94.079</td>
+<td style="text-align:right">101.270</td>
+</tr>
+</tbody>
+</table>
+<p>可以看到 Case B 中 Up 分量误差尤其大，这与低仰角观测主导、垂向更脆弱的现象是一致的。</p>
+<h3 id="124-%E6%AE%8B%E5%B7%AE%E5%9B%BE">12.4 残差图</h3>
+<p><img src="file:///home/guo/src/nav_ka_github/results_multisat_wls/ls_vs_wls_residuals.png" alt=""></p>
+<p>图 6 展示了逐星残差的 LS/WLS 对比。Case A 中两者差异不大；Case B 中 LS 的大残差主要集中在低仰角星，而 WLS 对这些差观测做了显著降权，因此整体解算稳定性更好。</p>
+<h3 id="125-monte-carlo-%E7%BB%9F%E8%AE%A1%E5%9B%BE">12.5 Monte Carlo 统计图</h3>
+<p><img src="file:///home/guo/src/nav_ka_github/results_multisat_wls/monte_carlo_position_error.png" alt=""></p>
+<p>图 7 展示了 Monte Carlo 的误差分布和累计分布。可以从分布整体看出 WLS 比 LS 更靠左，说明 WLS 在统计意义上整体优于 LS，而不只是单次样本碰巧更好。</p>
+<h3 id="126-monte-carlo-%E7%BB%9F%E8%AE%A1%E8%A1%A8">12.6 Monte Carlo 统计表</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:right">Mean (m)</th>
+<th style="text-align:right">Std (m)</th>
+<th style="text-align:right">P90 (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LS</td>
+<td style="text-align:right">183.398</td>
+<td style="text-align:right">120.032</td>
+<td style="text-align:right">356.426</td>
+</tr>
+<tr>
+<td>WLS</td>
+<td style="text-align:right">125.992</td>
+<td style="text-align:right">70.084</td>
+<td style="text-align:right">223.767</td>
+</tr>
+</tbody>
+</table>
+<p>从统计结果看，WLS 在均值、标准差和 90% 分位数三个指标上都优于 LS。这说明低质量观测降权不是“只改善一次”，而是在整组随机实验中都有效。</p>
+<h2 id="13-%E6%89%80%E6%9C%89%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">13. 所有关键代码片段</h2>
+<h3 id="131-%E6%97%A7%E9%93%BE%E8%B7%AF%E7%9C%9F%E5%AE%9E%E8%83%8C%E6%99%AF%E6%9E%84%E9%80%A0">13.1 旧链路真实背景构造</h3>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">build_legacy_channel_background</span><span class="hljs-params">()</span> -&gt; LegacyChannelBackground:</span>
+    field_result = LEGACY_DEBUG.build_fields_from_csv(...)
+    wkb_result = LEGACY_DEBUG.compute_real_wkb_series(...)
+    cfg_sig = LEGACY_DEBUG.build_signal_config_from_wkb_time(...)
+    plasma_rx = LEGACY_DEBUG.resample_wkb_to_receiver_time(...)
+    receiver_outputs = LEGACY_DEBUG.KaBpskReceiver(receiver_context).run()
+    trk_result = receiver_outputs.trk_result
+</div></code></pre>
+<p>这段代码说明：真实传播和单通道接收机背景确实来自旧文件。</p>
+<h3 id="132-%E5%A4%9A%E6%98%9F%E6%A0%87%E5%87%86%E4%BC%AA%E8%B7%9D%E5%BD%A2%E6%88%90">13.2 多星标准伪距形成</h3>
+<pre class="hljs"><code><div>sigma_m = legacy_bg.effective_pseudorange_sigma_1s_m * config.sigma_scale_factor / (sin_el ** <span class="hljs-number">0.70</span>)
+dispersive_delay_m = legacy_bg.tau_g_median_m * config.dispersive_scale_factor / (sin_el ** <span class="hljs-number">1.25</span>)
+
+pseudorange_m = (
+    geometric_range_m
+    + receiver_cfg.receiver_clock_bias_m
+    - C_LIGHT * sat.sat_clock_bias_s
+    + tropo_delay_m
+    + dispersive_delay_m
+    + hardware_bias_m
+    + noise_m
+)
+</div></code></pre>
+<p>这段代码说明：当前多星观测不是凭空写随机数，而是从旧链路真实背景定标后形成。</p>
+<h3 id="133-ls--wls-%E6%B1%82%E8%A7%A3">13.3 LS / WLS 求解</h3>
+<pre class="hljs"><code><div>h_rows.append([-los_unit[<span class="hljs-number">0</span>], -los_unit[<span class="hljs-number">1</span>], -los_unit[<span class="hljs-number">2</span>], <span class="hljs-number">1.0</span>])
+
+<span class="hljs-keyword">if</span> weighted:
+    weight_matrix = np.diag(<span class="hljs-number">1.0</span> / np.maximum(sigma_m, <span class="hljs-number">1e-6</span>) ** <span class="hljs-number">2</span>)
+    normal_matrix = h_matrix.T @ weight_matrix @ h_matrix
+    rhs_vector = h_matrix.T @ weight_matrix @ residual_vector_m
+<span class="hljs-keyword">else</span>:
+    normal_matrix = h_matrix.T @ h_matrix
+    rhs_vector = h_matrix.T @ residual_vector_m
+</div></code></pre>
+<p>这段代码体现了导航解算层最核心的数学差异：WLS 通过权阵下调差观测的影响。</p>
+<h3 id="134-%E4%B8%BB%E6%B5%81%E7%A8%8B">13.4 主流程</h3>
+<pre class="hljs"><code><div>legacy_bg = build_legacy_channel_background()
+case_a_result = run_experiment_case(receiver_cfg, legacy_bg, experiment_a_cfg, rng_case_a)
+case_b_result = run_experiment_case(receiver_cfg, legacy_bg, experiment_b_cfg, rng_case_b)
+monte_carlo_result = run_monte_carlo(receiver_cfg, legacy_bg, experiment_b_cfg, ...)
+
+plot_geometry_3d(...)
+plot_legacy_channel_overview(...)
+plot_pseudorange_formation(...)
+plot_ls_vs_wls_residuals(...)
+plot_monte_carlo_position_error(...)
+plot_dop_summary(...)
+</div></code></pre>
+<p>主流程已经完整串起了旧链路背景、多星导航层和最终报告输出。</p>
+<h2 id="14-%E5%BD%93%E5%89%8D%E4%BB%8D%E7%84%B6%E9%87%87%E7%94%A8%E7%9A%84%E7%AE%80%E5%8C%96%E4%B8%8E%E8%BE%B9%E7%95%8C">14. 当前仍然采用的简化与边界</h2>
+<p>这一节非常关键，因为它决定了汇报口径是否诚实。</p>
+<h3 id="141-%E5%BD%93%E5%89%8D%E4%BB%8D%E7%84%B6%E5%AD%98%E5%9C%A8%E7%9A%84%E7%AE%80%E5%8C%96">14.1 当前仍然存在的简化</h3>
+<ol>
+<li>
+<p><strong>多星几何不是广播星历</strong><br>
+当前卫星位置由静态自洽的 az/el 场景构造，不是真实广播星历，也没有轨道动力学。</p>
+</li>
+<li>
+<p><strong>所有卫星共享同一真实单通道传播背景</strong><br>
+新脚本复用了旧文件真实单通道 WKB / 接收机背景，但并没有为每颗卫星单独生成不同的真实鞘套路径。</p>
+</li>
+<li>
+<p><strong>对流层、硬件偏差、卫星钟差是参数化项</strong><br>
+这些项目前是导航层新增模型，不来自旧文件真实链路。</p>
+</li>
+<li>
+<p><strong>多星观测方差来自单通道统计映射</strong><br>
+多星 <code>sigma_m</code> 是基于旧脚本单通道观测误差统计映射得到的，不是真实多星同步跟踪直接输出。</p>
+</li>
+</ol>
+<h3 id="142-%E6%9C%AC%E6%AC%A1%E7%BB%93%E8%AE%BA%E7%9A%84%E9%80%82%E7%94%A8%E8%BE%B9%E7%95%8C">14.2 本次结论的适用边界</h3>
+<p>本报告的结论应被理解为：</p>
+<blockquote>
+<p>真实单通道 Ka/WKB 背景耦合下的 hybrid 多星标准伪距 / WLS 导航层实验结果。</p>
+</blockquote>
+<p>不应被理解为：</p>
+<blockquote>
+<p>真实多星端到端 Ka 导航系统性能定标。</p>
+</blockquote>
+<p>因此，本次的“好结果”与“坏结果”都应放在这个边界内解释。它们说明当前旧链路背景与多星导航层耦合后的表现，而不是最终系统性能上限。</p>
+<h2 id="15-%E6%9C%AC%E6%AC%A1%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%84%8F%E4%B9%89">15. 本次工作的系统意义</h2>
+<p>从工程层级看，这次工作的意义并不在于把某个数字优化得很漂亮，而在于把系统推进到了更高层：</p>
+<ul>
+<li>原脚本已经证明：真实传播和单通道接收机链路可运行。</li>
+<li>新脚本进一步证明：这些单通道真实背景可以被接到多星标准观测与导航解算层。</li>
+</ul>
+<p>因此，项目已经从“单链路实验台”推进到“多星导航层实验框架”。这为后续继续做以下事情提供了明确入口：</p>
+<ol>
+<li>真实广播星历接入</li>
+<li>各卫星独立真实传播路径</li>
+<li>真实单通道观测直接接入标准伪距形成</li>
+<li>速度与钟漂联合解算</li>
+<li>双频传播补偿</li>
+<li>EKF / 多历元滤波</li>
+</ol>
+<h2 id="16-%E8%BF%90%E8%A1%8C%E6%96%B9%E5%BC%8F%E4%B8%8E%E8%BE%93%E5%87%BA%E7%89%A9">16. 运行方式与输出物</h2>
+<p>当前主脚本运行方式为：</p>
+<pre class="hljs"><code><div>.venv/bin/python notebooks/exp_multisat_wls_pvt_report.py
+</div></code></pre>
+<p>输出目录为：</p>
+<pre class="hljs"><code><div>results_multisat_wls/
+</div></code></pre>
+<p>其中当前主报告使用的核心输出物包括：</p>
+<ul>
+<li><code>geometry_3d.png</code></li>
+<li><code>sky_geometry.png</code></li>
+<li><code>legacy_channel_overview.png</code></li>
+<li><code>pseudorange_formation.png</code></li>
+<li><code>ls_vs_wls_residuals.png</code></li>
+<li><code>monte_carlo_position_error.png</code></li>
+<li><code>dop_summary.png</code></li>
+<li><code>satellite_observations.csv</code></li>
+<li><code>summary.json</code></li>
+<li><code>report_summary.md</code></li>
+</ul>
+<h2 id="17-%E9%99%84%E5%BD%95">17. 附录</h2>
+<h3 id="171-%E5%8E%86%E5%8F%B2%E8%BE%93%E5%87%BA%E8%AF%B4%E6%98%8E">17.1 历史输出说明</h3>
+<p>当前目录中还存在 <code>pseudorange_error_budget.png</code>。它来自前一版本实验输出，在本次主报告里不作为核心证据引用。当前汇报以 <code>pseudorange_formation.png</code> 为主，因为它与当前脚本的真实复用逻辑和导航层构造是一致的。</p>
+<h3 id="172-%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E">17.2 数据文件说明</h3>
+<ul>
+<li><code>summary.json</code>：本次汇报数值的主来源。</li>
+<li><code>satellite_observations.csv</code>：逐星标准伪距组成与残差表。</li>
+<li><code>report_summary.md</code>：当前摘要版汇报。</li>
+</ul>
+<hr>
+<p><strong>一句话总结</strong>：<br>
+本次工作不是简单做出一个多星 WLS 数字，而是在真实单通道 Ka/WKB 链路基础上，第一次把项目推进到了多星标准观测与单历元导航解算层，同时明确交代了所有真实复用与所有仍然存在的简化。</p>
+
+</body>
+</html>

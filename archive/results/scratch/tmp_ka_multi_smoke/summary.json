@@ -1,0 +1,176 @@
+{
+  "title": "泛 Ka 多频 WKB 与接收机频谱分析",
+  "frequencies_hz": [
+    19000000000.0,
+    20000000000.0,
+    22500000000.0
+  ],
+  "frequency_labels": [
+    "19p0GHz",
+    "20p0GHz",
+    "22p5GHz"
+  ],
+  "wkb_time_range_s": [
+    0.0,
+    21.908327999999983
+  ],
+  "collision_frequency_hz": 1000000000.0,
+  "receiver_config": {
+    "fs_hz": 500000.0,
+    "chip_rate_hz": 50000.0,
+    "coherent_integration_s": 0.001,
+    "code_length": 127,
+    "cn0_dbhz": 45.0
+  },
+  "wkb_summary": {
+    "frequencies_hz": [
+      19000000000.0,
+      20000000000.0,
+      22500000000.0
+    ],
+    "amplitude": {
+      "min": [
+        0.0004942560021941739,
+        0.0013011474570543418,
+        0.01409747531016886
+      ],
+      "max": [
+        0.968556040075224,
+        0.9716625846823636,
+        0.9776713586437967
+      ],
+      "median": [
+        0.8715066214703807,
+        0.8848822300886963,
+        0.912109178984261
+      ],
+      "p05": [
+        0.027608547097904498,
+        0.05820161116185382,
+        0.2337398631971977
+      ],
+      "p95": [
+        0.9587198827361528,
+        0.9631573772825388,
+        0.9715179509334658
+      ]
+    },
+    "attenuation_dB": {
+      "min": [
+        -66.12096095909283,
+        -57.71346965437757,
+        -37.017173146945844
+      ],
+      "max": [
+        -0.2775049239602145,
+        -0.24969040210456647,
+        -0.1961421499225974
+      ],
+      "median": [
+        -1.1945861778718492,
+        -1.0622907763892775,
+        -0.7990636830407809
+      ],
+      "p05": [
+        -31.179154658244347,
+        -24.701949324773214,
+        -12.62574684828465
+      ],
+      "p95": [
+        -0.36616537435533303,
+        -0.3260549921922552,
+        -0.250983410433293
+      ]
+    },
+    "phase_shift_rad": {
+      "min": [
+        -55.152428406399814,
+        -58.117222170467,
+        -65.51691321599587
+      ],
+      "max": [
+        -42.10442120760247,
+        -45.10203687783199,
+        -52.99243770963312
+      ],
+      "median": [
+        -53.3582576571016,
+        -56.43247339583892,
+        -64.03847006970109
+      ],
+      "p05": [
+        -54.9929098072858,
+        -57.9718143193167,
+        -65.39606784207373
+      ],
+      "p95": [
+        -45.1191273504495,
+        -48.423951699007,
+        -56.94473298310964
+      ]
+    },
+    "group_delay_s": {
+      "min": [
+        4.66064736660715e-10,
+        4.716379771136578e-10,
+        4.705199486853459e-10
+      ],
+      "max": [
+        6.305745415725278e-10,
+        6.05497786755313e-10,
+        6.097736419632976e-10
+      ],
+      "median": [
+        4.89414213066214e-10,
+        4.875332402057989e-10,
+        4.815307695802869e-10
+      ],
+      "p05": [
+        4.739269884352902e-10,
+        4.732745282140055e-10,
+        4.715188930969333e-10
+      ],
+      "p95": [
+        5.67682622876528e-10,
+        5.574870882396389e-10,
+        5.46783155769631e-10
+      ]
+    }
+  },
+  "receiver_runs": [
+    {
+      "label": "19p0GHz",
+      "frequency_hz": 19000000000.0,
+      "tau_rmse_ns": 1008.0687857374492,
+      "fd_rmse_hz": 112.48373808689078,
+      "peak_to_second_db": 0.18762251224052628,
+      "loss_fraction": 0.08111192258535695,
+      "spectrum_png": "/home/guo/src/nav_ka_github/tmp_ka_multi_smoke/receiver_spectra/19p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "20p0GHz",
+      "frequency_hz": 20000000000.0,
+      "tau_rmse_ns": 692.7509400407216,
+      "fd_rmse_hz": 111.32914772258682,
+      "peak_to_second_db": 0.02810262031348678,
+      "loss_fraction": 0.06842249406609457,
+      "spectrum_png": "/home/guo/src/nav_ka_github/tmp_ka_multi_smoke/receiver_spectra/20p0GHz_receiver_spectrum.png"
+    },
+    {
+      "label": "22p5GHz",
+      "frequency_hz": 22500000000.0,
+      "tau_rmse_ns": 629.6740337532789,
+      "fd_rmse_hz": 102.63392101342072,
+      "peak_to_second_db": 0.13162030356216162,
+      "loss_fraction": 0.033001643235347815,
+      "spectrum_png": "/home/guo/src/nav_ka_github/tmp_ka_multi_smoke/receiver_spectra/22p5GHz_receiver_spectrum.png"
+    }
+  ],
+  "outputs": {
+    "results_dir": "/home/guo/src/nav_ka_github/tmp_ka_multi_smoke",
+    "summary_csv": "/home/guo/src/nav_ka_github/tmp_ka_multi_smoke/frequency_summary.csv",
+    "overview_png": "/home/guo/src/nav_ka_github/tmp_ka_multi_smoke/wkb_multifreq_overview.png",
+    "frequency_summary_png": "/home/guo/src/nav_ka_github/tmp_ka_multi_smoke/wkb_multifreq_frequency_summary.png",
+    "spectrum_dir": "/home/guo/src/nav_ka_github/tmp_ka_multi_smoke/receiver_spectra"
+  }
+}

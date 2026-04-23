@@ -1,0 +1,33 @@
+{
+  "label": "24p0GHz",
+  "frequency_hz": 24000000000.0,
+  "metrics": {
+    "tau_rmse_ns": 7993.446685844105,
+    "fd_rmse_hz": 3171.4419903359976,
+    "peak_to_second_ratio": 1.0061617840649426,
+    "peak_to_second_db": 0.02667817973922946,
+    "loss_found": false,
+    "loss_fraction": 0.14264195727588094,
+    "pll_integrator_clamped": 0,
+    "pll_freq_clamped": 0,
+    "tau_g_median_m": 0.143965052385543,
+    "tau_g_span_m": 0.03514933445463913,
+    "pseudorange_mean_m": 115852.05240463706,
+    "doppler_mean_hz": 29714.2831326188,
+    "carrier_phase_mean_cycles": 384491.3797329366,
+    "post_corr_snr_median_db": 16.45050424287392,
+    "carrier_lock_metric_median": 0.6922163766929653
+  },
+  "wkb": {
+    "amplitude_median": 0.9231789333927081,
+    "attenuation_db_median": -0.6942822905021588,
+    "phase_rad_median": -68.56976258199674,
+    "group_delay_ns_median": 0.4802157243913821
+  },
+  "samples": {
+    "pseudorange": 21908,
+    "carrier_phase": 21908,
+    "doppler": 21908
+  },
+  "spectrum_png": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack/single_channel/receiver_spectra/24p0GHz_receiver_spectrum.png"
+}

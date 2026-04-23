@@ -1,0 +1,33 @@
+{
+  "label": "24p5GHz",
+  "frequency_hz": 24500000000.0,
+  "metrics": {
+    "tau_rmse_ns": 533.6623574160452,
+    "fd_rmse_hz": 100.26412479053529,
+    "peak_to_second_ratio": 1.0053095190443324,
+    "peak_to_second_db": 0.022997948088424425,
+    "loss_found": false,
+    "loss_fraction": 0.01656928975716633,
+    "pll_integrator_clamped": 0,
+    "pll_freq_clamped": 0,
+    "tau_g_median_m": 0.14379123484210427,
+    "tau_g_span_m": 0.031644306179260034,
+    "pseudorange_mean_m": 116858.94530614388,
+    "doppler_mean_hz": 28281.84009786405,
+    "carrier_phase_mean_cycles": 381817.7536082337,
+    "post_corr_snr_median_db": 16.946727204035604,
+    "carrier_lock_metric_median": 0.9138791942569446
+  },
+  "wkb": {
+    "amplitude_median": 0.9264816717774038,
+    "attenuation_db_median": -0.6632634014192873,
+    "phase_rad_median": -70.07639049091753,
+    "group_delay_ns_median": 0.4796359314753151
+  },
+  "samples": {
+    "pseudorange": 21908,
+    "carrier_phase": 21908,
+    "doppler": 21908
+  },
+  "spectrum_png": "/home/guo/src/nav_ka_github/results_ka_multifreq/single_channel/receiver_spectra/24p5GHz_receiver_spectrum.png"
+}

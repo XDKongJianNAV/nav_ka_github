@@ -1,0 +1,63 @@
+{
+  "frequencies_hz": [
+    19000000000.0,
+    19500000000.0,
+    20000000000.0,
+    20500000000.0,
+    21000000000.0,
+    21500000000.0,
+    22000000000.0,
+    22500000000.0,
+    23000000000.0,
+    23500000000.0,
+    24000000000.0,
+    24500000000.0,
+    25000000000.0,
+    25500000000.0,
+    26000000000.0,
+    26500000000.0,
+    27000000000.0,
+    27500000000.0,
+    28000000000.0,
+    28500000000.0,
+    29000000000.0,
+    29500000000.0,
+    30000000000.0,
+    30500000000.0,
+    31000000000.0
+  ],
+  "metrics": {
+    "single_tau_rmse_ns": {
+      "mean_delta": 3913.059035670584,
+      "median_delta": 35.8850908790464,
+      "max_delta": 11856.815955029637,
+      "min_delta": -4.801285092631133
+    },
+    "single_fd_rmse_hz": {
+      "mean_delta": 1529.810418881369,
+      "median_delta": -19.698174124307783,
+      "max_delta": 3723.902182860309,
+      "min_delta": -29.492265267715652
+    },
+    "wls_case_b_wls_position_error_3d_m": {
+      "mean_delta": 1543.994270896427,
+      "median_delta": -18.18114633895821,
+      "max_delta": 3998.9825806529116,
+      "min_delta": -69.97310999313576
+    },
+    "ekf_pr_doppler_mean_position_error_3d_m": {
+      "mean_delta": 39773.6980231739,
+      "median_delta": 170.4873794272353,
+      "max_delta": 321556.6210320831,
+      "min_delta": 4.466862323459203
+    },
+    "ekf_pr_doppler_mean_velocity_error_3d_mps": {
+      "mean_delta": 4328.8283199000925,
+      "median_delta": 0.25939736094227384,
+      "max_delta": 32288.626472827742,
+      "min_delta": 0.012335004068630109
+    }
+  },
+  "baseline_root": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/results_ka_multifreq",
+  "corrected_root": "/Users/guozehao/Documents/ka-Nav/nav_ka_github/corrections/issue_01_truth_dependency/corrected_fullstack"
+}

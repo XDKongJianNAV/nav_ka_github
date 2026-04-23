@@ -1,0 +1,27 @@
+digraph corrected_receiver_chain {
+  graph [rankdir=LR, splines=polyline, nodesep=0.5, ranksep=0.7, bgcolor="white", margin=0.2];
+  node [shape=box, style="rounded", fontname="PingFang SC", fontsize=14, color="#333333", penwidth=1.2, margin="0.18,0.10"];
+  edge [fontname="PingFang SC", fontsize=12, color="#444444", penwidth=1.1, arrowsize=0.8];
+
+  rx [label="接收复信号\n含导航数据"];
+  acq [label="捕获\n粗码时延 / 粗频偏"];
+  wipeoff [label="本地载波去旋"];
+  corr [label="相关器\n早 / 准 / 晚"];
+  dll [label="码环\n非相干 DLL"];
+  car [label="载波环\nFLL 辅助 Costas PLL"];
+  nco [label="数控振荡器\n本地码 / 本地载波"];
+  nat [label="自然测量量\n码时延估计\n载波相位累计量\n载波频率估计"];
+  obs [label="观测形成"];
+  nav [label="WLS / EKF"];
+
+  rx -> acq -> wipeoff -> corr;
+  corr -> dll;
+  corr -> car;
+  dll -> nco [label="码控制量"];
+  car -> nco [label="载波控制量"];
+  nco -> wipeoff [label="本地载波"];
+  nco -> corr [label="本地码"];
+  dll -> nat;
+  car -> nat;
+  nat -> obs -> nav;
+}

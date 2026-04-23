@@ -1,0 +1,15 @@
+digraph observable_formation_chain {
+  graph [rankdir=LR, splines=polyline, nodesep=0.55, ranksep=0.75, bgcolor="white", margin=0.2];
+  node [shape=box, style="rounded", fontname="PingFang SC", fontsize=14, color="#333333", penwidth=1.2, margin="0.18,0.10"];
+  edge [fontname="PingFang SC", fontsize=12, color="#444444", penwidth=1.1, arrowsize=0.8];
+
+  nat [label="自然测量量\n码时延估计\n载波相位累计量\n载波频率估计"];
+  time [label="接收时标解释\n发射时刻恢复"];
+  wave [label="波长换算"];
+  sign [label="符号约定\n单位约定"];
+  model [label="统一观测方程\n几何项 / 钟差项 / 传播项 / 硬件项"];
+  std [label="标准观测量\n伪距 / 载波相位 / 距离率"];
+
+  nat -> time -> model -> std;
+  nat -> wave -> sign -> model;
+}
